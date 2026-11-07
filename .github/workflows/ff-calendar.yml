@@ -1,0 +1,40 @@
+# Keeps a copy of Forex Factory's economic calendar on this site (ff/thisweek.json, ff/nextweek.json), so COIL's web
+# version can read it: a web page can't read Forex Factory itself (the browser blocks it), but it can read a file on its
+# own site. Runs every hour on GitHub's servers; commits only when the calendar changed.
+name: Forex Factory calendar
+on:
+  schedule:
+    - cron: '17 * * * *'
+  workflow_dispatch:
+  push:
+    paths:
+      - .github/workflows/ff-calendar.yml
+permissions:
+  contents: write
+concurrency:
+  group: ff-calendar
+  cancel-in-progress: false
+jobs:
+  copy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - name: Fetch the calendar
+        run: |
+          mkdir -p ff
+          for wk in thisweek nextweek; do
+            if curl -fsSL --max-time 30 -A "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36" \
+                 "https://nfs.faireconomy.media/ff_calendar_${wk}.json" -o "ff/${wk}.tmp" \
+               && python3 -c "import json,sys; d=json.load(open(sys.argv[1])); assert isinstance(d, list)" "ff/${wk}.tmp"; then
+              mv "ff/${wk}.tmp" "ff/${wk}.json"; echo "${wk}: ok"
+            else
+              rm -f "ff/${wk}.tmp"; echo "${wk}: not available this time (kept the last copy)"
+            fi
+          done
+      - name: Save it to the site
+        run: |
+          git config user.name "COIL calendar"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add ff
+          if git diff --cached --quiet; then echo "no change"; else git commit -m "Forex Factory calendar $(date -u +%Y-%m-%dT%H:%MZ)" && git push; fi

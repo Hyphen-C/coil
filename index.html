@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline' blob:; worker-src blob:; style-src 'unsafe-inline'; img-src data: blob:; connect-src https://api.tradier.com https://sandbox.tradier.com https://finnhub.io; base-uri 'none'; form-action 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline' blob:; worker-src blob:; style-src 'unsafe-inline'; img-src data: blob:; connect-src 'self' https://api.tradier.com https://sandbox.tradier.com https://finnhub.io; base-uri 'none'; form-action 'none'">
 <meta name="referrer" content="no-referrer">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="mobile-web-app-capable" content="yes">
@@ -13,7 +13,7 @@
 <link rel="apple-touch-icon" href="data:image/png;base64,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">
 <link rel="icon" href="data:image/png;base64,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">
 <title>COIL</title>
-<!-- H-C COIL 1.6.7, web version -->
+<!-- H-C COIL 1.7.0, web version -->
 <style>html,body{overflow-x:hidden;overscroll-behavior-x:none;-webkit-text-size-adjust:100%;text-size-adjust:100%;max-width:100%}</style>
 </head>
 <body style="margin:0;background:#393a3d">
@@ -21,7 +21,7 @@
 // ==UserScript==
 // @name         H-C COIL — Trend & Structure Options Desk
 // @namespace    hyphen-c
-// @version      1.6.7
+// @version      1.7.0
 // @description  A chart-first desk for long calls and puts, built on Trend & Structure (HMA cloud, Zig Zag Dynamic channels, Breadth Divergence, VolCX) and its Trade Score with the 20/90-day volume profile. A scanner for coiled stocks with cheap 2–4 week options, a stop set on the stock from ATR, ADR and IV, position size from your risk, and trading through Tradier with take profit, a backup stop at Tradier and a stock-level stop it watches for you. Dealer gamma (GEX) levels and read, news and alerts like the cockpit's, and every part of the chart on or off.
 // @author       Hyphen-C
 // @match        file:///*hc-coil*.html
@@ -1526,6 +1526,17 @@ const COIL_ENGINE = (function () {
     return { strikes: arr, gexSpot, grid, rng, flip, flipDist, callWall: cw ? cw.K : null, putWall: pw ? pw.K : null, maxGamma: mg ? mg.K : null,
       cwG: cw ? cw.callG : 0, pwG: pw ? pw.putG : 0, adv, adv$, gexPct, regime, above: isNum(flip) ? spot > flip : null, n, oiC, oiP, exps: used };
   }
+  // the setup score: the volatility state (coiled +60, firing +40, coiling — neutral with compression 60+ — +30,
+  // expanding −60, elevated −100), cheapness around 50 (−50 to +50), and +80 more when it's coiled or coiling AND cheap
+  // (60+): the one COIL is looking for
+  function setupScore(state, comp, cheap) {
+    const coiling = state === 'Neutral' && isNum(comp) && comp >= 60;
+    const st = state === 'Coiled' ? 60 : state === 'Firing' ? 40 : coiling ? 30 : state === 'Expanding' ? -60 : state === 'Elevated' ? -100 : 0;
+    const ch = isNum(cheap) ? clamp(cheap, 0, 100) - 50 : 0;
+    const both = (state === 'Coiled' || state === 'Firing' || coiling) && isNum(cheap) && cheap >= 60 ? 80 : 0;
+    const word = state === 'Coiled' ? 'coiled' : state === 'Firing' ? 'firing' : coiling ? 'coiling' : state === 'Expanding' ? 'expanding' : state === 'Elevated' ? 'elevated' : 'neutral';
+    return { pts: st + ch + both, st, ch, both, word, coiling };
+  }
   function analyzeTicker(inp) {
     const c = inp.cfg || {}, bars = asArray(inp.bars), n = bars.length;
     if (n < 60) throw new Error('Not enough daily history for ' + inp.sym + ' (' + n + ' bars)');
@@ -1564,7 +1575,10 @@ const COIL_ENGINE = (function () {
     A.liq = liqRead(opts[fav], c.opt && c.opt.minOI);
     A.fit = styleFit(A, c.style);
     // a stock outside your style sorts under every one inside it
-    A.rank0 = sideRank(SC[fav]) + (isNum(comp) ? comp / 20 : 0) + (CR && isNum(CR.cheap) ? CR.cheap / 20 : 0);
+    // the setup COIL is built to find: coiled (or coiling) with cheap options. It counts up to about two grade steps, so
+    // a coiled, cheap B outranks an expanding A, and a stock already running (expanding, elevated) sorts down
+    A.setup = setupScore(vl ? vl.state : '', comp, CR ? CR.cheap : NaN);
+    A.rank0 = sideRank(SC[fav]) + A.setup.pts + (isNum(comp) ? comp / 20 : 0) + (CR && isNum(CR.cheap) ? CR.cheap / 20 : 0);
     A.rank = A.rank0 - (A.fit.ok ? 0 : 1000);
     return A;
   }
@@ -1576,7 +1590,7 @@ const COIL_ENGINE = (function () {
     NYSE_CLOSED, NYSE_EARLY, isTradingDay, sessionCloseMin, nextSessionOpen,
     ZONES, setDisplayZone, displayZone, dzLabel, dzParts, dzHM, dzClock, dz12, dzSecs, dzDateStr, etAt,
     cleanDaily, spotFrom, normalizeChains, pickExpirations, buildSmile, termStructure, LIQ, liqGrade, optTickClass, optTick, roundTick,
-    etFields, sessOpen, sessClose, cleanBars, chartDaily, aggBars, isExtBar, wmaSeries, liveBar, chartTimeline, tlIndex, tlTime, tlDays,
+    etFields, sessOpen, sessClose, setupScore, cleanBars, chartDaily, aggBars, isExtBar, wmaSeries, liveBar, chartTimeline, tlIndex, tlTime, tlDays,
     smaS, emaS, rmaS, stdevS, highestS, lowestS, percentrankS, trS, atrS, rsiS, barssinceS, crossS, lastNum, logretS,
     HMA_DEF, ghostHma, hmaCloud, bbkc, pivotBoxes, liqLevels, srZones, SR_DEF, ZZ_DEF, zigzag, zzStats, zzStrength, VCX_DEF, VCX_COL, volcx, scoreVP,
     BDP_DEF, BDP_ROWS, bdpMarket, bdpRead, basketBreadth, basketLive, marketSeries, geo,
@@ -1595,7 +1609,7 @@ const COIL_ENGINE = (function () {
   window.__HC_COIL__ = true;
 
   const E = COIL_ENGINE, isNum = E.isNum, clamp = E.clamp;
-  const VERSION = '1.6.7';
+  const VERSION = '1.7.0';
 
   // ───────────────────────── storage ─────────────────────────
   const hasGM = typeof GM_getValue === 'function' && typeof GM_setValue === 'function';
@@ -1646,7 +1660,7 @@ const COIL_ENGINE = (function () {
   };
   const DEFAULTS = {
     env: 'production', tz: 'America/Los_Angeles', refreshSec: 5,
-    wlReady: '', wlTop: '', wlMkt: 'SPY,QQQ,IWM,DIA,VIX,UUP,IBIT,TLT,GLD', wlSync: true, extShow: true,
+    wlReady: '', wlTop: '', wlMkt: 'SPY,QQQ,IWM,DIA,VIX,UUP,IBIT,TLT,GLD', wlSync: true, extShow: true, wlCustom: '[]', wlNames: '{}', wlHide: '',
     scanList: 'F,SOFI,INTC,BAC,T,PFE,AAL,CCL,SNAP,NKE,KO,CSCO,WFC,VZ,PYPL,RIVN,NU,CMCSA,GM,DAL,SLB,OXY,KVUE,WBD,BMY,USB,UBER,HOOD,C,MARA',
     mktList: 'SPY,QQQ,IWM,DIA,VIX,TLT,UUP', autoScan: true, scanTimes: '6:45 AM, 9:00 AM, 11:00 AM, 12:30 PM', basket: BASKET,
     hmaLen: 12, hmaWidth: 0.5, zzLen: 100, bdpOn: true, bdpPreset: 'Combined', bdpRef: 'market', scA: 8, scB: 6,
@@ -1696,6 +1710,20 @@ const COIL_ENGINE = (function () {
       const R = norm(s.wlReady); s.wlReady = R.join(','); s.wlTop = norm(s.wlTop).filter(t => !R.includes(t)).join(',');
       // Big Market keeps the order you typed
       const M = []; String(s.wlMkt == null ? DEFAULTS.wlMkt : s.wlMkt).toUpperCase().split(/[\s,;]+/).forEach(t => { t = t.replace(/[^A-Z0-9.\-^$]/g, ''); if (t && !M.includes(t)) M.push(t); }); s.wlMkt = M.slice(0, 30).join(','); }
+    // your own lists (20 at most): each ticker in one list at most, never also in Ready or Top tier; names up to 40 letters
+    { const taken = new Set(String(s.wlReady).split(',').concat(String(s.wlTop).split(',')).filter(Boolean)); let a = [];
+      try { a = JSON.parse(typeof s.wlCustom === 'string' ? s.wlCustom : '[]'); } catch (e) { a = []; }
+      const ids = new Set(), out = [];
+      (Array.isArray(a) ? a : []).forEach(c => {
+        if (!c || !/^[a-z0-9]{1,12}$/.test(c.id) || ids.has(c.id) || out.length >= 20) return; ids.add(c.id);
+        const L = []; (Array.isArray(c.s) ? c.s : []).forEach(t => { t = String(t).toUpperCase().replace(/[^A-Z0-9.\-]/g, ''); if (t && !L.includes(t) && !taken.has(t)) { L.push(t); taken.add(t); } });
+        out.push({ id: c.id, n: String(c.n || 'List').replace(/\s+/g, ' ').trim().slice(0, 40) || 'List', s: L.slice(0, 80).sort() });
+      });
+      s.wlCustom = JSON.stringify(out);
+      let n = {}; try { n = JSON.parse(typeof s.wlNames === 'string' ? s.wlNames : '{}'); } catch (e) { n = {}; }
+      const n2 = {}; if (n && typeof n === 'object') ['in', 'mkt', 'ready', 'top', 'all'].forEach(k => { if (typeof n[k] === 'string' && n[k].trim()) n2[k] = n[k].replace(/\s+/g, ' ').trim().slice(0, 40); });
+      s.wlNames = JSON.stringify(n2);
+      s.wlHide = String(s.wlHide || '').split(',').filter((k, i, x) => ['ready', 'top', 'mkt'].includes(k) && x.indexOf(k) === i).join(','); }
     if (!E.ZONES.some(z => z[0] === s.tz)) s.tz = DEFAULTS.tz;
     if (!['production', 'sandbox'].includes(s.env)) s.env = 'production';
     ['newsOn', 'newsScan', 'newsSound', 'styleHide', 'autoScan', 'bdpOn', 'sound', 'wlSync', 'extShow'].forEach(k => { if (typeof s[k] !== 'boolean') s[k] = DEFAULTS[k]; });
@@ -1714,7 +1742,7 @@ const COIL_ENGINE = (function () {
   };
   S.ui.ov = Object.assign({}, UI0.ov, S.ui.ov || {});
   if (S.ui.railSort === 'chg') S.ui.railSort = 'upPct';      // v1.6.3: today's move sorts by % or $, down or up
-  { const W = UI0.wlOrder, o = Array.isArray(S.ui.wlOrder) ? S.ui.wlOrder.filter((k, i, a) => W.includes(k) && a.indexOf(k) === i) : [];
+  { const W = UI0.wlOrder, o = Array.isArray(S.ui.wlOrder) ? S.ui.wlOrder.filter((k, i, a) => (W.includes(k) || /^c:[a-z0-9]{1,12}$/.test(k)) && a.indexOf(k) === i) : [];
     S.ui.wlOrder = o.concat(W.filter(k => !o.includes(k))); }
   ['trades', 'orders', 'journal', 'intents'].forEach(k => { if (!Array.isArray(S[k])) S[k] = []; });
   // what a trade only means while this page watches it: the readings through the stop, an armed confirm, an open edit.
@@ -2159,7 +2187,8 @@ const COIL_ENGINE = (function () {
     }
     return r._fit;
   }
-  const rowRank = (r) => { const f = rowFit(r); return (isNum(r.rank0) ? r.rank0 : r.rank) - (f && !f.ok ? 1000 : 0); };
+  // (a row scanned before 1.7.0 has no setup score in its rank yet: it's added here from its state, compression and cheapness)
+  const rowRank = (r) => { const f = rowFit(r), su = r.setupPts == null && r.state ? E.setupScore(r.state, r.comp, r.cheap).pts : 0; return (isNum(r.rank0) ? r.rank0 : r.rank) + su - (f && !f.ok ? 1000 : 0); };
 
   // ───────────────────────── the market: proxies, the breadth basket, sectors ─────────────────────────
   const MK_SYMS = ['SPY', 'QQQ', 'RSP', 'QQEW'];
@@ -2313,6 +2342,7 @@ const COIL_ENGINE = (function () {
     M5: { lab: '5m', min: 5, base: '5min', days: 25, every: 90e3, word: '5-minute' }
   };
   const TF_KEYS = Object.keys(TFS);
+  const INTRA_DAYS = 38;                       // calendar days of intraday bars asked of Tradier (it keeps about 40)
   if (!TFS[S.ui.tf]) S.ui.tf = 'D';
   let loadSeq = 0;
   function pushRecent(sym) { S.ui.recent = [sym].concat((S.ui.recent || []).filter(x => x !== sym)).slice(0, 12); saveUI(); }
@@ -2401,7 +2431,7 @@ const COIL_ENGINE = (function () {
       hma: A.hma.trend, hmaSince: A.hma.since, slope: A.hma.slope, bdp: bl ? { s: bl.score, b: bl.bull, l: bl.live, w: bl.warn, u: bl.bullSig } : null,
       cheap: A.cheap, ivW: CR ? CR.ivW : NaN, ratio: CR ? CR.ratio : NaN, pctHv: CR ? CR.pctHv : NaN, ivr: CR && CR.ivr.n >= 20 ? CR.ivr.pct : NaN, ev: CR ? CR.events.length : 0,
       atrPct: A.vr.atrPct, adrPct: A.vr.adrPct, adrTyp: A.vr.adrTyp, hv20: A.vr.hv20, hvMed: A.vr.hvMed, liq: A.liq.grade, liqI: { grade: A.liq.grade, spr: A.liq.spr },
-      rank0: A.rank0, sector: A.sector ? A.sector.code : '',
+      rank0: A.rank0, setupPts: A.setup ? A.setup.pts : 0, sector: A.sector ? A.sector.code : '',
       gex: A.G ? { reg: A.G.regime, pct: A.G.gexPct, flip: A.G.flip, cw: A.G.callWall, pw: A.G.putWall } : null };
   }
   // ── intraday bars for the chart: Tradier's 15- or 5-minute bars, built up into 1H and 4H
@@ -2412,8 +2442,13 @@ const COIL_ENGINE = (function () {
     if (have && have.busy) return;
     c.intra[tfk] = Object.assign(have || {}, { busy: true });
     try {
-      const raw = await T.bars(c.sym, tf.base, ymdAgo(Math.round(tf.days * 7 / 5) + 2), dayET(), Math.min(tf.every, 60e3), 1, ext);
-      if (S.cur !== c) return;
+      // Tradier keeps about 40 calendar days of 5- and 15-minute bars: ask for no more (a longer reach is refused); if it's
+      // refused all the same, once more over three weeks
+      const back = Math.min(Math.round(tf.days * 7 / 5) + 2, INTRA_DAYS);
+      let raw;
+      try { raw = await T.bars(c.sym, tf.base, ymdAgo(back), dayET(), Math.min(tf.every, 60e3), 1, ext); }
+      catch (e1) { if (S.cur !== c) return; raw = await T.bars(c.sym, tf.base, ymdAgo(21), dayET(), Math.min(tf.every, 60e3), 1, ext); }
+      if (S.cur !== c) { c.intra[tfk].busy = false; return; }
       // 5m and 15m come as they are (the extended ones marked); 1H and 4H are grouped, each session on its own
       const b = E.cleanBars(raw), bars = tf.min === 5 || tf.min === 15 ? b.filter(x => ext || !E.isExtBar(x)).map(x => (E.isExtBar(x) ? Object.assign(x, { ext: true }) : x)) : E.aggBars(b, tf.min, ext);
       c.intra[tfk] = { bars, at: Date.now(), busy: false, err: null, ext };
@@ -2449,6 +2484,8 @@ const COIL_ENGINE = (function () {
       if (S.ui.page === 'wl' || (S.ui.page === 'desk' && !S.ui.railC)) mktArr().forEach(s => syms.add(s));
       alertSyms().slice(0, 20).forEach(s => syms.add(s));                              // price alerts waiting
       if (c && c.sym) chartPositions(c.sym).forEach(p => syms.add(OS(p.symbol)));       // your positions on the chart: their P/L
+      // everything you hold, for In trades (its stocks and its options; 30 at most)
+      heldPositions().slice(0, 15).forEach(p => { const o = parseOcc(p.symbol); syms.add(OS(p.symbol)); if (o) syms.add(o.root); });
       if (syms.size) {
         const q = await T.quotes([...syms], 0, open.length ? 2 : 1);
         Object.assign(S.quotes, q);
@@ -2533,17 +2570,73 @@ const COIL_ENGINE = (function () {
   const LST = { undo: null, undoT: null, busy: new Set(), confirmOff: false };
   const scanListArr = () => symList(S.settings.scanList, 80);
   function setScanList(arr) { S.settings.scanList = [...new Set(arr)].slice(0, 80).sort().join(','); saveSettings(); }
-  // the watchlists: 'ready' (Ready to Pull Trigger), 'top' (Top tier) or '' (the full list only)
-  const wlArr = (k) => symList(S.settings[k === 'ready' ? 'wlReady' : 'wlTop'], 80);
-  const wlOf = (sym) => (wlArr('ready').includes(sym) ? 'ready' : wlArr('top').includes(sym) ? 'top' : '');
-  const WL_NAME = { ready: 'Ready to Pull Trigger', top: 'Top tier', '': 'Full list' };
+  // the watchlists: 'ready' (Ready to Pull Trigger), 'top' (Top tier), your own ('c:<id>'), or '' (the full list only).
+  // A ticker sits in one of them at most. Your own lists live in settings as [{ id, n: name, s: [tickers] }]; any list
+  // can take a new name (wlNames), and Ready, Top tier, Big Market and your own can go (wlHide; your own are deleted)
+  const isCustom = (k) => /^c:[a-z0-9]{1,12}$/.test(String(k || ''));
+  function wlCustom() {
+    try { const a = JSON.parse(S.settings.wlCustom || '[]'); return Array.isArray(a) ? a.filter(c => c && /^[a-z0-9]{1,12}$/.test(c.id) && Array.isArray(c.s)).map(c => ({ id: c.id, n: String(c.n || 'List').slice(0, 40), s: symList(c.s.join(','), 80) })) : []; } catch (e) { return []; }
+  }
+  function wlCustomSave(a) { S.settings.wlCustom = JSON.stringify(a.map(c => ({ id: c.id, n: String(c.n || 'List').slice(0, 40), s: [...new Set(c.s)].sort() }))); saveSettings(); }
+  const wlCustomOf = (k) => wlCustom().find(c => 'c:' + c.id === k) || null;
+  const wlArr = (k) => (k === 'ready' ? symList(S.settings.wlReady, 80) : k === 'top' ? symList(S.settings.wlTop, 80) : isCustom(k) ? (wlCustomOf(k) || { s: [] }).s : []);
+  function wlOf(sym) {
+    if (wlArr('ready').includes(sym)) return 'ready';
+    if (wlArr('top').includes(sym)) return 'top';
+    const c = wlCustom().find(x => x.s.includes(sym));
+    return c ? 'c:' + c.id : '';
+  }
+  const WL_DEF = { in: 'In trades', mkt: 'Big Market', ready: 'Ready to Pull Trigger', top: 'Top tier', all: 'Full list', '': 'Full list' };
+  function wlNames() { try { const o = JSON.parse(S.settings.wlNames || '{}'); return o && typeof o === 'object' && !Array.isArray(o) ? o : {}; } catch (e) { return {}; } }
+  function wlName(k) {
+    k = String(k == null ? '' : k);
+    if (isCustom(k)) { const c = wlCustomOf(k); return c ? c.n : 'List'; }
+    const n = wlNames()[k === '' ? 'all' : k];
+    return typeof n === 'string' && n.trim() ? n.trim().slice(0, 40) : WL_DEF[k] || k;
+  }
+  const WL_NAME = new Proxy({}, { get: (t, k) => wlName(typeof k === 'string' ? k : '') });
+  const WL_HIDEABLE = ['ready', 'top', 'mkt'];
+  const wlHidden = () => String(S.settings.wlHide || '').split(',').filter(k => WL_HIDEABLE.includes(k));
+  // the lists in their order: the built-in ones, then each of your own (a new one goes in just above the full list)
+  function wlOrderFix() {
+    const base = ['in', 'mkt', 'ready', 'top', 'all'], cust = wlCustom().map(c => 'c:' + c.id);
+    let o = (S.ui.wlOrder || []).filter((k, i, a) => (base.includes(k) || cust.includes(k)) && a.indexOf(k) === i);
+    base.forEach(k => { if (!o.includes(k)) o.push(k); });
+    cust.forEach(k => { if (!o.includes(k)) { const i = o.indexOf('all'); o.splice(i < 0 ? o.length : i, 0, k); } });
+    S.ui.wlOrder = o;
+    return o;
+  }
+  function wlNew() {
+    const a = wlCustom(); let id;
+    do { id = Math.random().toString(36).slice(2, 8); } while (a.some(c => c.id === id));
+    a.push({ id, n: 'New list ' + (a.length + 1), s: [] }); wlCustomSave(a);
+    wlOrderFix(); saveUI();
+    return 'c:' + id;
+  }
+  function wlRename(k, name) {
+    name = String(name || '').replace(/\s+/g, ' ').trim().slice(0, 40);
+    if (isCustom(k)) { const a = wlCustom(), c = a.find(x => 'c:' + x.id === k); if (!c) return; c.n = name || c.n; wlCustomSave(a); }
+    else { const o = wlNames(); if (name && name !== WL_DEF[k]) o[k] = name; else delete o[k]; S.settings.wlNames = JSON.stringify(o); saveSettings(); }
+  }
+  // a list goes: your own is deleted (its tickers stay on the full list); Ready and Top tier empty out and hide (their
+  // tickers back to the full list); Big Market hides and keeps its tickers for when you bring it back
+  function wlDelete(k) {
+    if (isCustom(k)) { wlCustomSave(wlCustom().filter(c => 'c:' + c.id !== k)); wlOrderFix(); saveUI(); return; }
+    if (!WL_HIDEABLE.includes(k)) return;
+    if (k === 'ready') S.settings.wlReady = ''; if (k === 'top') S.settings.wlTop = '';
+    S.settings.wlHide = [...new Set(wlHidden().concat(k))].join(','); saveSettings();
+  }
+  function wlUnhide(k) { S.settings.wlHide = wlHidden().filter(x => x !== k).join(','); saveSettings(); }
   // the Big Market list: what each one stands for (Tradier has no crypto or dollar index, so ETFs stand in for them)
   const MKT_NAME = { SPY: 'S&P 500', QQQ: 'Nasdaq 100', IWM: 'Russell 2000', DIA: 'Dow', VIX: 'Volatility (VIX)', UUP: 'US dollar', IBIT: 'Bitcoin', BITO: 'Bitcoin futures', TLT: '20-year Treasuries', GLD: 'Gold', SLV: 'Silver', USO: 'Oil', XLE: 'Energy', XLF: 'Financials', XLK: 'Technology', SMH: 'Semiconductors', HYG: 'High yield', EEM: 'Emerging markets', FXI: 'China', SPX: 'S&P 500 index', NDX: 'Nasdaq 100 index', RUT: 'Russell 2000 index' };
   const mktArr = () => String(S.settings.wlMkt || '').split(',').filter(Boolean);
   function setWatch(sym, to) {
-    const R = wlArr('ready').filter(s => s !== sym), T = wlArr('top').filter(s => s !== sym);
+    const R = wlArr('ready').filter(s => s !== sym), T = wlArr('top').filter(s => s !== sym), C = wlCustom().map(c => Object.assign(c, { s: c.s.filter(s => s !== sym) }));
     if (to === 'ready') R.push(sym); if (to === 'top') T.push(sym);
-    S.settings.wlReady = R.sort().join(','); S.settings.wlTop = T.sort().join(','); saveSettings();
+    if (isCustom(to)) { const c = C.find(x => 'c:' + x.id === to); if (c) c.s.push(sym); else to = ''; }
+    if (to === 'ready' || to === 'top') { const h = wlHidden(); if (h.includes(to)) S.settings.wlHide = h.filter(x => x !== to).join(','); }
+    S.settings.wlReady = R.sort().join(','); S.settings.wlTop = T.sort().join(',');
+    S.settings.wlCustom = JSON.stringify(C.map(c => ({ id: c.id, n: c.n, s: [...new Set(c.s)].sort() }))); saveSettings();
     if (to && !scanListArr().includes(sym)) setScanList(scanListArr().concat(sym));
     flash(sym + (to ? ' → ' + WL_NAME[to] : ' → the full list only'), 'ok');
     listChanged();
@@ -3864,7 +3957,8 @@ const COIL_ENGINE = (function () {
   const nRun = (fn) => new Promise((res, rej) => { NQ.q.push({ fn, res, rej }); nPump(); });
   // a news site's answer as text; the error says who answered and how, never the address or a key
   async function nGet(url, name, headers) {
-    if (WEB && name !== 'Finnhub') throw new Error(name + ' can\'t be read from the web version — add a Finnhub key in Settings → News for headlines there');
+    const mine = /^\.\//.test(url);                       // a file on your own site (the web version's calendar copy)
+    if (WEB && name !== 'Finnhub' && !mine) throw new Error(name + ' can\'t be read from the web version — add a Finnhub key in Settings → News for headlines there');
     const r = await nRun(() => gmRequest({ url, headers: Object.assign({ Accept: 'application/json, application/rss+xml, application/xml, text/xml;q=0.9, */*;q=0.8' }, headers || {}), timeout: 15000 }));
     const st = +r.status || 0;
     if (st === 401 || st === 403) throw new Error(name === 'Finnhub' ? 'Finnhub refused the key (' + st + '): check it in Settings → News' : name + ' refused the request (' + st + ')');
@@ -3875,7 +3969,10 @@ const COIL_ENGINE = (function () {
   // Finnhub: the key rides in its header, only ever to finnhub.io
   async function finnGet(path, key) {
     const k = key || finnKey(); if (!k) throw new Error('No Finnhub key');
-    const t = await nGet(FINN + path, 'Finnhub', { 'X-Finnhub-Token': k });
+    // in a web page the browser won't send Finnhub a header of our own (Finnhub doesn't allow it across sites), so there
+    // the key goes as Finnhub's token parameter — still only to finnhub.io, over HTTPS, and never into an error
+    const t = WEB ? await nGet(FINN + path + (path.includes('?') ? '&' : '?') + 'token=' + encodeURIComponent(k), 'Finnhub')
+      : await nGet(FINN + path, 'Finnhub', { 'X-Finnhub-Token': k });
     try { return JSON.parse(t); } catch (e) { throw new Error('Finnhub sent something that isn\'t data'); }
   }
   const srcOk = (name, n) => { NW.src[name] = { ok: true, at: Date.now(), n }; };
@@ -3949,7 +4046,9 @@ const COIL_ENGINE = (function () {
     const now = Date.now(), items = []; let ok = false;
     for (const wk of ['thisweek', 'nextweek']) {
       try {
-        const txt = await nGet('https://nfs.faireconomy.media/ff_calendar_' + wk + '.json', 'Forex Factory');
+        // the web version reads the copy your site keeps (a GitHub Action refreshes it hourly): Forex Factory itself
+        // can't be read from a web page
+        const txt = WEB ? await nGet('./ff/' + wk + '.json?h=' + Math.floor(now / 600e3), 'Forex Factory (your site\'s copy)') : await nGet('https://nfs.faireconomy.media/ff_calendar_' + wk + '.json', 'Forex Factory');
         let j = null; try { j = JSON.parse(txt); } catch (e) { j = null; }
         if (!Array.isArray(j)) throw new Error('Forex Factory sent something that isn\'t a calendar');
         j.forEach(x => {
@@ -4531,6 +4630,10 @@ const COIL_ENGINE = (function () {
         else if (!wlsSame(L, mine, there) && (!(L.k in B.lb) || !wlsSameSeq(mine, B.lb[L.k]) || !wlsSame(L, there, B.rb[L.k]))) held = await wlsWrite(ids[L.k], L.name, mine, there);
         B.lb[L.k] = mine.slice(); B.rb[L.k] = held.slice(); B.ids[L.k] = ids[L.k];
       }
+      // your own lists: each its own Tradier watchlist, "COILX <id> <name>"
+      const cn = await wlsCustomSync(all, B);
+      if (cn === null) { WLS.again = true; return; }
+      if (cn) changed = [changed, cn].filter(Boolean).join('; ');
       B.env = S.settings.env;
       store.set(KEY.wlsync, B);
       WLS.at = Date.now(); WLS.err = '';
@@ -4543,11 +4646,69 @@ const COIL_ENGINE = (function () {
       if (WLS.again) { WLS.again = false; clearTimeout(WLS.timer); WLS.timer = setTimeout(() => wlSync('again'), 1500); }
     }
   }
+  // ── your own lists at Tradier: one watchlist each, named "COILX <id> <name>" (the name as Tradier will keep it:
+  // letters, digits, spaces and & ' . -). Like the others, what changed on either side since the last round comes
+  // across: a ticker added or taken off, a new name, a new list — and a list deleted on one device goes from the other
+  // (a list this device had at the last round and Tradier no longer has was deleted there; one Tradier had at the last
+  // round and this device no longer has was deleted here). Returns what came in, or null when your lists changed here
+  // while Tradier was being read (the round goes again).
+  const WLS_CX = /^COILX ([a-z0-9]{1,12})(?: (.*))?$/i;
+  const wlsTN = (n) => String(n || '').replace(/[^A-Za-z0-9 &'.\-]/g, '').replace(/\s+/g, ' ').trim().slice(0, 40);
+  async function wlsCustomSync(all, B) {
+    B.cn = B.cn || {};
+    const remote = {};
+    all.forEach(w => { const m = WLS_CX.exec(String((w && w.name) || '').trim()); if (m) remote[m[1].toLowerCase()] = { id: String(w.id), name: (m[2] || '').trim(), full: String(w.name).trim() }; });
+    for (const cid of Object.keys(remote)) remote[cid].items = (await wlsRead(remote[cid].id)).sort();
+    const before = S.settings.wlCustom, loc = wlCustom(), notes = [], next = [], gone = [], drop = [];
+    const L1 = { sorted: true };
+    [...new Set(loc.map(c => c.id).concat(Object.keys(remote)))].forEach(cid => {
+      const k = 'c:' + cid, L = loc.find(c => c.id === cid), R = remote[cid], seenL = k in B.lb, seenR = k in B.rb;
+      if (L && R) {
+        const items = seenL && seenR ? wlsMerge(L1, L.s, B.lb[k], R.items, B.rb[k]) : L.s.concat(R.items.filter(x => !L.s.includes(x)));
+        const bn = B.cn[cid], lch = bn != null && wlsTN(L.n) !== bn, rch = bn != null && R.name !== bn;
+        let n = L.n; if (!lch && rch && R.name) { n = R.name; notes.push(L.n + ' renamed ' + R.name); }
+        const plus = items.filter(x => !L.s.includes(x)), minus = L.s.filter(x => !items.includes(x));
+        if (plus.length || minus.length) notes.push(n + (plus.length ? ' +' + plus.slice(0, 4).join(' +') : '') + (minus.length ? ' −' + minus.slice(0, 4).join(' −') : ''));
+        next.push({ id: cid, n, s: [...new Set(items)].sort() });
+      } else if (L) {
+        if (seenR) { notes.push(L.n + ' deleted'); gone.push(cid); }        // deleted on the other device
+        else next.push(L);                                                     // new here: it goes up
+      } else if (R) {
+        if (seenL) drop.push(cid);                                             // deleted here: it comes off Tradier
+        else { next.push({ id: cid, n: R.name || 'List', s: R.items }); notes.push('new list ' + (R.name || 'List')); }
+      }
+    });
+    if (S.settings.wlCustom !== before) return null;
+    if (notes.length) {
+      S.settings.wlCustom = JSON.stringify(next); cleanSettings(S.settings);
+      WLS.applying = true; try { saveSettings(); } finally { WLS.applying = false; }
+      wlOrderFix(); saveUI(); listChanged();
+    }
+    for (const cid of gone) { delete B.lb['c:' + cid]; delete B.rb['c:' + cid]; delete B.cn[cid]; }
+    for (const cid of drop) {
+      try { await tTrade('DELETE', '/watchlists/' + encodeURIComponent(remote[cid].id), null, 0); } catch (e) { if (!/404|not found/i.test(String(e && e.message))) throw e; }
+      delete B.lb['c:' + cid]; delete B.rb['c:' + cid]; delete B.cn[cid];
+    }
+    for (const c of wlCustom()) {
+      const k = 'c:' + c.id, R = remote[c.id], tn = wlsTN(c.n), full = ('COILX ' + c.id + ' ' + tn).trim();
+      let held;
+      if (!R) { const cr = await wlsCreate(full, c.s); held = cr.items; }
+      else {
+        held = R.items;
+        if (!wlsSame(L1, c.s, R.items)) held = await wlsWrite(R.id, full, c.s, R.items);
+        if (R.full !== full && (!c.s.length || wlsSame(L1, c.s, R.items))) await tTrade('PUT', '/watchlists/' + encodeURIComponent(R.id), { name: full }, 0);
+      }
+      B.lb[k] = c.s.slice(); B.rb[k] = held.slice().sort(); B.cn[c.id] = tn;
+    }
+    return notes.join('; ');
+  }
   // a list changed here: a round a few seconds on (several changes in a row go up together)
   function wlsPoke() {
     if (WLS.applying || !S.settings || !S.settings.wlSync || !WLS.base) return;
     const L = wlsLocal();
-    if (WLS_LISTS.every(x => WLS.base.lb[x.k] && wlsSameSeq(L[x.k], WLS.base.lb[x.k]))) return;
+    const cu = wlCustom(), cuSame = cu.every(c => WLS.base.lb['c:' + c.id] && wlsSameSeq(c.s, WLS.base.lb['c:' + c.id]) && WLS.base.cn && WLS.base.cn[c.id] === wlsTN(c.n))
+      && Object.keys(WLS.base.lb).filter(k => /^c:/.test(k)).every(k => cu.some(c => 'c:' + c.id === k));
+    if (cuSame && WLS_LISTS.every(x => WLS.base.lb[x.k] && wlsSameSeq(L[x.k], WLS.base.lb[x.k]))) return;
     clearTimeout(WLS.poke); WLS.poke = setTimeout(() => wlSync('change'), 2500);
   }
   function wlsStart() {
@@ -4570,7 +4731,7 @@ const COIL_ENGINE = (function () {
   // token, your Finnhub key, your account number or whether trading is on (each device keeps its own); it's only your
   // settings, so you can send it to yourself in a text or a note.
   var SYN = { code: '', err: '', confirm: false, held: null, msg: '' };
-  const SYN_SKIP = ['tradeOn', 'tradeAcct', 'setV'];
+  const SYN_SKIP = ['tradeOn', 'tradeAcct', 'setV', 'wlCustom'];             // (your own lists go across through Tradier)
   const SYN_UI = ['cs', 'ov', 'wlOrder', 'wlFold', 'railSort'];
   function synMake() {
     const s = {}, u = {};
@@ -4633,7 +4794,9 @@ const COIL_ENGINE = (function () {
     wlArr('ready').forEach(add); wlArr('top').forEach(add); mktArr().forEach(add);
     return L.slice(0, EXT_N);
   }
-  const extNow = () => E.marketState(Date.now()) !== 'OPEN';
+  // only while one is on: the pre-market (4:00 to 9:30 AM ET) or the after-hours (4:00 to 8:00 PM ET), on a trading
+  // day; outside them (overnight, the weekend) the line goes, so the lists stay clean
+  function extNow() { const now = Date.now(), st = E.marketState(now); if (st !== 'PRE' && st !== 'POST') return false; const mi = E.etFields(now).mi; return st === 'PRE' ? mi >= 240 : mi < 1200; }
   async function extRead(sym) {
     const raw = await T.bars(sym, '15min', ymdAgo(7), dayET(), 60e3, 0, true);
     const b = E.cleanBars(raw);
@@ -5136,7 +5299,7 @@ const COIL_ENGINE = (function () {
     const c = S.cur;
     const msg = !store.get(KEY.tradier, '') ? 'Add your Tradier token in SET to load charts'
       : !c ? 'Type a ticker above, or pick one from the scanner'
-      : c.err ? c.err : c.loading ? 'Loading ' + c.sym + '…' : S.ui.tf !== 'D' && !(c.intra[S.ui.tf] && c.intra[S.ui.tf].bars) ? 'Loading ' + TFS[S.ui.tf].word + ' bars…' : 'No bars';
+      : c.err ? c.err : c.loading ? 'Loading ' + c.sym + '…' : S.ui.tf !== 'D' && !(c.intra[S.ui.tf] && c.intra[S.ui.tf].bars) ? (c.intra[S.ui.tf] && c.intra[S.ui.tf].err && !c.intra[S.ui.tf].busy ? 'Couldn\'t read the ' + TFS[S.ui.tf].word + ' bars: ' + c.intra[S.ui.tf].err + '. COIL tries again shortly' : 'Loading ' + TFS[S.ui.tf].word + ' bars…') : 'No bars';
     g.fillStyle = '#bdbdbd'; g.font = '500 14px ' + FONT + ''; g.textAlign = 'center'; g.textBaseline = 'middle';
     g.fillText(msg, W / 2, Hh / 2); g.textAlign = 'left';
   }
@@ -5504,9 +5667,15 @@ const COIL_ENGINE = (function () {
   }
   // the option positions at Tradier on a ticker: the freshest read of them (the trading side's, or Positions')
   function chartPositions(sym) {
-    const ps = BK.pos && (!PK.pos || BK.posAt >= PK.at) ? BK.pos : PK.pos || [];
-    return (ps || []).filter(p => { const o = parseOcc(p.symbol); return o && o.root === sym && +p.quantity > 0; });
+    return heldPositions().filter(p => { const o = parseOcc(p.symbol); return o && o.root === sym && +p.quantity > 0; });
   }
+  // everything you hold at Tradier, from the freshest read of it (the trading side's, or Positions')
+  function heldPositions() {
+    const ps = BK.pos && (!PK.pos || BK.posAt >= (PK.at || 0)) ? BK.pos : PK.pos || BK.pos || [];
+    return (ps || []).filter(p => p && +p.quantity !== 0);
+  }
+  // the stocks under what you hold (an option's underlying, or the stock itself)
+  function heldRoots() { return [...new Set(heldPositions().map(p => { const o = parseOcc(p.symbol); return o ? o.root : String(p.symbol || '').toUpperCase(); }).filter(Boolean))]; }
   // weekdays from the day you got in to today, that day counted (day 1 is the day you bought)
   function daysHeld(ts) {
     if (!(ts > 0)) return NaN;
@@ -6068,7 +6237,7 @@ a.nbl:hover{text-decoration:underline;color:#fff}
 .rhead h2{font-size:14px;font-weight:600;margin:0;flex:1 1 auto}
 .rsort{display:flex;align-items:center;gap:6px;padding:0 10px 8px 12px;font-size:11.5px;color:var(--faint)}
 .rsort select{flex:1 1 auto;min-width:0;padding:2px 4px;font-size:12px}
-.ri .lx{display:block;font-size:11px;color:var(--dim);margin-top:2px;white-space:nowrap}.ri .lx b{display:inline-block;font-size:9.5px;font-weight:800;letter-spacing:.04em;color:#140a26;background:#b388ff;border-radius:3px;padding:0 4px;margin-right:4px}
+.ri .lx{display:block;font-size:11px;color:var(--dim);margin-top:1px;white-space:nowrap;line-height:1.2}.ri .lx b{display:inline-block;font-size:9.5px;font-weight:800;letter-spacing:.04em;color:#140a26;background:#b388ff;border-radius:3px;padding:0 4px;margin-right:4px}
 .txh{font-style:normal;color:var(--dim);margin-left:2px}.txh em{font-style:normal}
 .rchg{display:flex;align-items:center;gap:4px;padding:0 10px 8px 12px;font-size:11.5px;color:var(--faint)}.rchg span{margin-right:2px}
 .rchg button{flex:0 0 auto;padding:3px 8px;border-radius:5px;border:1px solid var(--line2);background:var(--inp);color:var(--dim);font-size:12px;cursor:pointer}
@@ -6077,7 +6246,7 @@ a.nbl:hover{text-decoration:underline;color:#fff}
 .prog i{display:block;height:100%;background:var(--cyan);transition:width .3s}
 .rnote{font-size:11.5px;color:var(--faint);padding:0 12px 6px}
 .rlist{flex:1 1 auto;overflow-y:auto;padding:0 6px 10px}
-.ri{display:flex;flex-direction:column;gap:2px;padding:7px 8px 7px 9px;border-radius:6px;cursor:pointer;border:0;background:transparent;width:100%;text-align:left;margin-bottom:1px;position:relative}
+.ri{display:flex;flex-direction:column;gap:1px;padding:6px 8px 6px 9px;border-radius:6px;cursor:pointer;border:0;background:transparent;width:100%;text-align:left;margin-bottom:1px;position:relative}
 .ri:hover{background:var(--surf)}
 .rx{position:absolute;right:4px;top:4px;width:20px;height:20px;border-radius:5px;border:0;background:var(--surf3);color:#fff;cursor:pointer;display:none;padding:0;line-height:20px;font-size:14px}
 .rx::before{content:"×"}
@@ -6098,12 +6267,16 @@ a.nbl:hover{text-decoration:underline;color:#fff}
 .wlh .nm{flex:1 1 auto}.wlh .cnt{font-weight:600;opacity:.8}
 .wl-in .wlh{color:#9cf59c}.wl-ready .wlh{color:#ffd54f}.wl-top .wlh{color:#80cbc4}
 .wl-in,.wl-ready{border-bottom:1px solid var(--line);padding-bottom:4px}
+.wled{display:flex;align-items:center;gap:6px;padding:6px 8px}.wled input{flex:1 1 auto;min-width:0;font-weight:700}
+.wlnew{display:flex;flex-wrap:wrap;align-items:center;gap:10px;padding:10px 9px 14px}
+.wl-c .wlh{color:#90caf9}.wl-c{border-bottom:1px solid var(--line);padding-bottom:4px}.wb.cust{color:#90caf9}
+#hc-coil .btn.dng{background:#c62828;border-color:#c62828;color:#fff}
 .wle{font-size:11px;color:var(--faint);padding:2px 9px 8px}
 .wlhr{display:flex;align-items:center}.wlhr .wlh{flex:1 1 auto;min-width:0}
 .wlmv{display:flex;gap:2px;padding-right:6px;opacity:0;transition:opacity .12s}.wl:hover .wlmv,.wlmv:focus-within{opacity:1}
 .wlmv button{width:20px;height:18px;border:0;border-radius:4px;background:var(--surf3);color:var(--dim);font-size:9px;line-height:18px;padding:0;cursor:pointer}.wlmv button:hover{color:#fff}.wlmv button:disabled{opacity:.3;cursor:default}
 .wl-mkt .wlh{color:#c5a3ff}.wl-mkt{border-bottom:1px solid var(--line);padding-bottom:4px}
-.ri.mk .l2 .faint{font-size:11px}
+.ri.mkr .l2 .nm{font-size:11px;flex:0 1 auto;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .wlpage{max-width:560px;margin:0 auto}.wlpage .wlmv{opacity:1}.wlpage .wlmv button{width:34px;height:30px;font-size:12px;line-height:30px}
 .syn textarea{width:100%;box-sizing:border-box;margin:6px 0 4px;font:11px/1.35 ui-monospace,Menlo,monospace;word-break:break-all}.syn .acts{display:flex;gap:6px;margin:4px 0}.syn-diff{font-size:12px;margin:4px 0;line-height:1.4}
 .perfout{width:100%;box-sizing:border-box;font:11px/1.45 ui-monospace,Menlo,Consolas,monospace;background:var(--surf);color:var(--txt);border:1px solid var(--line);border-radius:6px;padding:8px;resize:vertical;white-space:pre}
@@ -6133,9 +6306,13 @@ a.nbl:hover{text-decoration:underline;color:#fff}
 .ri.on{background:var(--surf2)}
 .ri.off .s,.ri.off .p,.ri.off .g{opacity:.55}
 .ri.on::before{content:"";position:absolute;left:0;top:7px;bottom:7px;width:3px;border-radius:2px;background:var(--cyan)}
-.ri .l1,.ri .l2{display:flex;align-items:center;gap:8px;min-width:0}
-.ri .s{flex:1 1 auto;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-weight:700;font-size:13.5px;letter-spacing:.3px}
-.ri .p{flex:0 0 auto;text-align:right;font-size:12.5px;white-space:nowrap}
+/* every list's rows alike: the ticker and its price, then the day's move and the rest; snug lines */
+.ri .l1,.ri .l2{display:flex;align-items:center;gap:8px;min-width:0;line-height:1.2}
+.ri .l1{justify-content:flex-start;padding-right:46px}
+.ri .s{flex:0 1 auto;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-weight:700;font-size:13.5px;letter-spacing:.3px}
+.ri .p{flex:0 0 auto;text-align:left;font-size:12.5px;white-space:nowrap}
+.ri .m .sbd{flex:0 0 auto;color:#4dd0e1;font-size:11px}
+.ri .cg{flex:0 0 auto;font-size:11.5px;white-space:nowrap}
 .ri .m{flex:1 1 auto;display:flex;align-items:center;gap:6px;font-size:11.5px;color:var(--dim);min-width:0;white-space:nowrap;overflow:hidden}
 .ri .m .dot{flex:0 0 auto}.ri .m .st{flex:0 0.001 auto;min-width:0;overflow:hidden;text-overflow:ellipsis}.ri .m .fl{flex:0 0 auto}
 .ri .m .meter{flex:0 12 46px;min-width:12px}
@@ -6424,9 +6601,9 @@ a.nwh:hover{color:#fff;text-decoration:underline}
 .pk-h{display:flex;align-items:baseline;gap:10px}.pk-h b{font-size:17px;letter-spacing:.3px}.pk-q{color:var(--dim);font-size:13px}
 .pk-pl{display:flex;align-items:baseline;gap:10px;margin:4px 0 2px}.pk-pl b{font-size:28px;font-weight:700;line-height:1.1}.pk-pl span{font-size:16px;font-weight:600}
 .pk-px{display:flex;flex-wrap:wrap;gap:4px 14px;font-size:13px;color:var(--dim)}.pk-px b{color:var(--txt)}
-.pk-plan{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin:8px 0 0}.pk-plan .pp{display:flex;flex-direction:column;gap:1px;padding:6px 9px;border-radius:6px;background:var(--surf3);border-left:3px solid var(--line2)}
+.pk-plan{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px;margin:8px 0 0}.pk-plan .pp{min-width:0}.pk-plan .pp{display:flex;flex-direction:column;gap:1px;padding:6px 9px;border-radius:6px;background:var(--surf3);border-left:3px solid var(--line2)}
 .pk-plan .pp.st{border-left-color:#ef5350}.pk-plan .pp.tp{border-left-color:#26a69a}.pk-plan .pp i{font-style:normal;font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--faint)}.pk-plan .pp b{font-size:16px}.pk-plan .pp span{font-size:11.5px}.pk-plan .pp.none b{color:var(--faint)}
-.pk-plan .pp .pl{display:flex;justify-content:space-between;gap:4px;font-size:11px;white-space:nowrap}.pk-plan .pp .pl em{font-style:normal;color:var(--faint)}
+.pk-plan .pp .pl{display:flex;flex-wrap:wrap;justify-content:space-between;column-gap:4px;font-size:11px;line-height:1.3}.pk-plan .pp .pl>span{white-space:nowrap}.pk-plan .pp .pl em{font-style:normal;color:var(--faint)}
 .pk-who{font-size:11.5px;color:var(--faint);margin:4px 1px 0;line-height:1.35}
 .pk-ords{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 0}.pk-o{font-size:12px;padding:3px 8px;border-radius:5px;background:var(--surf3);color:var(--txt)}
 .pk-acts{display:flex;gap:8px;margin:12px 0 0;flex-wrap:wrap}
@@ -6449,13 +6626,15 @@ a.nwh:hover{color:#fff;text-decoration:underline}
 .pk-opts .tgrid input{font-size:16px}
 .pbar{display:none}
 /* the full-screen chart (the ⛶ button on a phone or a tablet) */
-.cfx,.tools .cfb{display:none}
+.cfx,.cfh,.tools .cfb{display:none}
 #hc-coil.cfull .top,#hc-coil.cfull .nbar,#hc-coil.cfull .pbar,#hc-coil.cfull .rail,#hc-coil.cfull .insp,#hc-coil.cfull .page{display:none}
 #hc-coil.cfull .center{position:fixed;left:0;top:0;right:0;bottom:0;z-index:150;height:auto;min-height:0;padding:env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);background:var(--chart)}
 #hc-coil.cfull .center .chrow{flex:1 1 auto;min-height:0}
-#hc-coil.cfull .cfx{display:flex;align-items:center;justify-content:center;position:absolute;right:calc(10px + env(safe-area-inset-right));top:calc(2px + env(safe-area-inset-top));z-index:5;width:40px;height:40px;border-radius:20px;border:1px solid var(--line2);background:rgba(20,20,22,.92);color:#fff;font-size:18px;cursor:pointer}
+#hc-coil.cfull .cfh{display:flex;order:-1;align-items:center;gap:10px;flex:0 0 auto;padding:6px calc(8px + env(safe-area-inset-right)) 6px 12px;border-bottom:1px solid var(--bd);background:var(--frame);white-space:nowrap;overflow:hidden}
+.cfh .fs{font-weight:800;font-size:17px;letter-spacing:.4px}.cfh .fp{font-weight:700;font-size:17px}.cfh .fc{font-size:13px}.cfh .fx{font-size:12px;color:var(--dim)}.cfh .fx b{font-size:10px;font-weight:800;color:#140a26;background:#b388ff;border-radius:3px;padding:0 4px;margin-right:3px}.cfh .fx em{font-style:normal}
+#hc-coil.cfull .cfx{display:flex;align-items:center;justify-content:center;margin-left:auto;flex:0 0 auto;width:38px;height:38px;border-radius:19px;border:1px solid var(--line2);background:var(--surf3);color:#fff;font-size:17px;cursor:pointer}
 #hc-coil.cfull .flash{z-index:160}
-#hc-coil.cfull .tools{flex-wrap:nowrap;overflow-x:auto;padding-right:58px;scrollbar-width:none}#hc-coil.cfull .tools::-webkit-scrollbar{display:none}
+#hc-coil.cfull .tools{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none}#hc-coil.cfull .tools::-webkit-scrollbar{display:none}
 #hc-coil.cfull .tools [data-act="full"]{display:none}#hc-coil.cfull .tools .ovs{flex-wrap:nowrap;flex:0 0 auto}#hc-coil.cfull .tools .spacer{flex:0 0 8px}
 @media (max-width:760px){#hc-coil .tools [data-act="full"]{display:none}}
 @media (max-width:1180px){.tools .cfb{display:inline-flex}}
@@ -6505,6 +6684,7 @@ a.nwh:hover{color:#fff;text-decoration:underline}
   #hc-coil .csf .btn{width:100%;min-height:46px;font-size:16px;font-weight:700;border:0;border-radius:10px;background:var(--cyan);color:#06222a}
   /* steady side to side: the Ticker tab only scrolls up and down; anything wide scrolls inside its own strip */
   .main{overflow-x:hidden;overscroll-behavior-x:none}
+  .page,.pocket,.pk-card,.wlpage{max-width:100vw;box-sizing:border-box;min-width:0}.page{overflow-x:hidden;overflow-x:clip}
   .desk,.desk>.center,.desk .insp,.desk .insp>.ibody{min-width:0;max-width:100vw;box-sizing:border-box}
   .desk .insp,.desk .insp>.ibody{overflow-x:hidden;overflow-x:clip}
   .desk .insp>.ibody *{max-width:100%}
@@ -6518,7 +6698,7 @@ a.nwh:hover{color:#fff;text-decoration:underline}
   .fr{grid-template-columns:minmax(0,1fr) minmax(0,46%)}
   .fr select,.fr input,.fr textarea{width:100%;min-width:0;box-sizing:border-box}
   .page table{display:block;overflow-x:auto;max-width:100%}
-  .wlpage .rhead{padding:4px 2px 8px}.wlpage .ri{padding:10px 10px}.wlpage .ri .rw,.wlpage .ri .rx{display:block}
+  .wlpage .rhead{padding:4px 2px 8px}.wlpage .ri{padding:7px 10px;gap:2px}.wlpage .ri .rw,.wlpage .ri .rx{display:block}
   .wlpage .wlh{font-size:12px;padding:10px 8px 8px}
   .wlpage .rchg{padding:0 2px 10px}.wlpage .rchg button{padding:8px 13px;font-size:13.5px}
   .tools{overflow-x:auto;flex-wrap:nowrap;scrollbar-width:none}.tools::-webkit-scrollbar{display:none}
@@ -6612,7 +6792,7 @@ a.nwh:hover{color:#fff;text-decoration:underline}
       <div class="tools" data-id="tools"></div>
       <div class="chrow"><div class="chart" data-id="chart"></div><aside class="csp hide" data-id="csp"></aside></div>
       <div class="dock" data-id="dock"></div>
-      <button class="cfx" data-act="cfull" aria-label="Leave the full-screen chart" title="Leave full screen">✕</button>
+      <div class="cfh" data-id="cfh"></div>
     </div>
     <aside class="insp"><button class="cstrip istrip" data-act="insp-x" title="Show the panel: Setup, Options, GEX and the rest"><span>«</span><span class="v">Setup · Options · GEX · News</span></button><nav class="tabs" data-id="tabs"></nav><div class="ibody" data-id="ibody"></div></aside>
   </section>
@@ -6650,6 +6830,10 @@ a.nwh:hover{color:#fff;text-decoration:underline}
     // price
     const spot = q ? E.spotFrom(q, null) : NaN, ch = q ? +q.change : NaN, chp = q ? +q.change_percentage : NaN, cls = ch > 0 ? 'up' : ch < 0 ? 'dn' : 'dim';
     const xh = c ? extOf(c.sym) : null;
+    // in the full-screen chart: the ticker, its price and day (and PM / AH) in a bar of its own, with ✕ to leave
+    const fh = $('cfh');
+    if (fh) paint(fh, '<span class="fs">' + (c ? esc(c.sym) : '—') + '</span>' + (c ? '<span class="fp">' + F.px(spot) + '</span><span class="fc ' + cls + '">' + F.sn(ch) + ' ' + F.sp(chp, 2) + '</span>' + (xh ? '<span class="fx"><b>' + xh.kind + '</b> ' + F.px(xh.px) + ' <em class="' + (xh.chg > 0 ? 'up' : xh.chg < 0 ? 'dn' : 'dim') + '">' + F.sp(xh.pct, 1) + '</em></span>' : '') : '')
+      + '<button class="cfx" data-act="cfull" aria-label="Leave the full-screen chart" title="Leave full screen">✕</button>');
     paint($('tpx'), c ? '<b>' + F.px(spot) + '</b><span class="' + cls + '">' + F.sn(ch) + '  ' + F.sp(chp, 2) + (xh ? '<i class="txh" title="' + (xh.kind === 'PM' ? 'Pre-market' : 'After hours') + ', from the regular close ' + F.px(xh.base) + '"> · ' + xh.kind + ' ' + F.px(xh.px) + ' <em class="' + (xh.chg > 0 ? 'up' : xh.chg < 0 ? 'dn' : 'dim') + '">' + F.sp(xh.pct, 2) + '</em></i>' : '') + '</span>' : '<b class="dim">—</b><span class="faint">no ticker</span>');
     renderSpring();
     // the readings
@@ -6763,11 +6947,15 @@ a.nwh:hover{color:#fff;text-decoration:underline}
       + (nOff && !S.scan.busy ? ' <button class="lnk" data-act="rm-off" title="Take every ticker that misses your style off the scan list (you can undo it)">' + (LST.confirmOff ? '· Click again to remove ' + nOff : '· Remove them') + '</button>' : '') + '</div>'
       + '<div class="rlist" data-sk="rlist">' + railLists(rows) + (rows.length ? '' : '<div class="empty">Add tickers to scan in Settings.</div>') + '</div>' + (page ? '</div>' : '');
   }
+  // what you're in: COIL's trades, buys working, and every position at Tradier (opened on your other device or in its app too)
+  function inTradeSyms() { return [...new Set(openTrades().map(t => t.ticker).concat(S.orders.map(o => o.und), heldRoots()).filter(Boolean))]; }
+  // the lists showing, in order (In trades only when you're in something; the ones you removed left out)
+  function wlShownKeys(inN) { const hid = wlHidden(), cu = wlCustom().map(c => 'c:' + c.id); return wlOrderFix().filter(k => (k !== 'in' || inN) && !hid.includes(k) && (!isCustom(k) || cu.includes(k))); }
   // the scanner as your watchlists, top down: what you're in, Ready to Pull Trigger, Top tier, then the rest of the
   // full list. Each sorts by the scanner's sort and folds on its header.
   function railLists(rows) {
     const by = {}; rows.forEach(r => { by[r.sym] = r; });
-    const inSyms = [...new Set(openTrades().map(t => t.ticker).concat(S.orders.map(o => o.und)).filter(Boolean))];
+    const inSyms = inTradeSyms();
     const used = new Set(inSyms), fold = S.ui.wlFold || {};
     const order = (list, hide) => {
       const rs = list.map(s => by[s] || S.scan.res[s] || { sym: s, pending: true }), done = rs.filter(r => !r.pending && !(hide && S.settings.styleHide && rowFit(r) && !rowFit(r).ok));
@@ -6775,14 +6963,26 @@ a.nwh:hover{color:#fff;text-decoration:underline}
       if (CHG_SORT[S.ui.railSort]) return sortRows(done.concat(rs.filter(r => r.pending)), S.ui.railSort, -1);
       return sortRows(done, S.ui.railSort, -1).concat(rs.filter(r => r.pending));
     };
-    const ord = S.ui.wlOrder, shown = ord.filter(k => k !== 'in' || inSyms.length);
+    const ord = wlOrderFix(), shown = wlShownKeys(inSyms.length), hid = wlHidden();
     // each list's header: fold it, and ▲ ▼ to move it among the others (the order is kept)
-    const head = (k, name, n, tip, f) => '<div class="wlhr"><button class="wlh" data-act="wl-fold" data-l="' + k + '" aria-expanded="' + !f + '" title="' + esc(tip) + '"><span class="ch">▾</span><span class="nm">' + name + '</span><span class="cnt">' + n + '</span></button>'
-      + '<span class="wlmv"><button data-act="wl-move" data-l="' + k + '" data-d="-1" title="Move this list up"' + (shown.indexOf(k) === 0 ? ' disabled' : '') + ' aria-label="Move ' + esc(name) + ' up">▲</button><button data-act="wl-move" data-l="' + k + '" data-d="1" title="Move this list down"' + (shown.indexOf(k) === shown.length - 1 ? ' disabled' : '') + ' aria-label="Move ' + esc(name) + ' down">▼</button></span></div>';
+    const HEAD0 = (k, name, n, tip, f) => '<div class="wlhr"><button class="wlh" data-act="wl-fold" data-l="' + k + '" aria-expanded="' + !f + '" title="' + esc(tip) + '"><span class="ch">▾</span><span class="nm">' + name + '</span><span class="cnt">' + n + '</span></button>'
+      + '<span class="wlmv"><button data-act="wl-edit" data-l="' + k + '" title="Rename' + (k === 'in' || k === 'all' ? '' : ' or delete') + ' this list" aria-label="Rename ' + esc(name) + '">✎</button><button data-act="wl-move" data-l="' + k + '" data-d="-1" title="Move this list up"' + (shown.indexOf(k) === 0 ? ' disabled' : '') + ' aria-label="Move ' + esc(name) + ' up">▲</button><button data-act="wl-move" data-l="' + k + '" data-d="1" title="Move this list down"' + (shown.indexOf(k) === shown.length - 1 ? ' disabled' : '') + ' aria-label="Move ' + esc(name) + ' down">▼</button></span></div>';
+    const head = (k, name, n, tip, f) => {
+      // renaming (and deleting) a list, in its header
+      if (LST.wlEdit === k) {
+        const del = isCustom(k) || WL_HIDEABLE.includes(k), sure = LST.wlDelSure === k;
+        return '<div class="wled"><input data-id="wlName" data-l="' + k + '" ' + NOFILL + ' maxlength="40" value="' + esc(wlName(k)) + '" aria-label="List name">'
+          + '<button class="btn sm pri" data-act="wl-ren" data-l="' + k + '">Save</button>'
+          + (del ? '<button class="btn sm' + (sure ? ' dng' : ' ghost') + '" data-act="wl-del" data-l="' + k + '" title="' + (isCustom(k) ? 'Delete this list (its tickers stay on the full list)' : k === 'mkt' ? 'Hide Big Market (its tickers are kept for when you bring it back)' : 'Remove this list (its tickers go back to the full list)') + '">' + (sure ? 'Tap again' : 'Delete') + '</button>' : '')
+          + '<button class="btn sm ghost" data-act="wl-edit-x" aria-label="Cancel">✕</button></div>';
+      }
+      return HEAD0(k, name, n, tip, f);
+    };
     const sec = (k, name, list, hide, tip) => {
       if (!list.length && k === 'in') return '';
       const f = !!fold[k], rs = order(list, hide);
-      return '<div class="wl wl-' + k + (f ? ' fold' : '') + '">' + head(k, name, list.length, tip, f)
+      if (!list.length && isCustom(k)) return '<div class="wl wl-c' + (f ? ' fold' : '') + '" data-l="' + k + '">' + head(k, name, 0, tip, f) + (f ? '' : '<div class="wle">Empty: ☆ on a ticker files it here.</div>') + '</div>';
+      return '<div class="wl wl-' + (isCustom(k) ? 'c' : k) + (f ? ' fold' : '') + '"' + (isCustom(k) ? ' data-l="' + k + '"' : '') + '>' + head(k, name, list.length, tip, f)
         + (f ? '' : rs.map(r => railItem(r, k)).join('') || (k === 'ready' && !wlArr('top').length && !wlArr('ready').length ? '<div class="wle">☆ on a ticker (hover it) files it here or in Top tier.</div>' : '')) + '</div>';
     };
     // Big Market: prices only (no setups), in the order you listed them
@@ -6792,19 +6992,24 @@ a.nwh:hover{color:#fff;text-decoration:underline}
       return '<div class="wl wl-mkt' + (f ? ' fold' : '') + '">' + head('mkt', 'Big Market', L.length, 'The market at a glance: edit the list in Settings → Scanner. It keeps your order, except when you sort by today\'s move', f)
         + (f ? '' : L.map(mktItem).join('') || '<div class="wle">Add tickers in Settings → Scanner → Big Market.</div>') + '</div>';
     };
-    const ready = wlArr('ready').filter(s => !used.has(s) && by[s]); ready.forEach(s => used.add(s));
-    const top = wlArr('top').filter(s => !used.has(s) && by[s]); top.forEach(s => used.add(s));
+    const claim = (k) => { const L = wlArr(k).filter(s => !used.has(s) && by[s]); L.forEach(s => used.add(s)); return L; };
+    const ready = hid.includes('ready') ? [] : claim('ready'), top = hid.includes('top') ? [] : claim('top');
+    const cust = {}; wlCustom().forEach(c => { cust['c:' + c.id] = claim('c:' + c.id); });
     const rest = rows.map(r => r.sym).filter(s => !used.has(s));
-    const make = { in: () => sec('in', 'In trades', inSyms, false, 'What you\'re in (and buys still working)'), mkt,
-      ready: () => sec('ready', 'Ready to Pull Trigger', ready, false, 'The ones you\'re about to take'),
-      top: () => sec('top', 'Top tier', top, false, 'Your best names'), all: () => sec('all', 'Full list', rest, true, 'The rest of your scan list') };
-    return ord.map(k => make[k]()).join('');
+    const make = { in: () => sec('in', wlName('in'), inSyms, false, 'What you\'re in (and buys still working), on any device'), mkt: () => (hid.includes('mkt') ? '' : mkt()),
+      ready: () => (hid.includes('ready') ? '' : sec('ready', wlName('ready'), ready, false, 'The ones you\'re about to take')),
+      top: () => (hid.includes('top') ? '' : sec('top', wlName('top'), top, false, 'Your best names')), all: () => sec('all', wlName('all'), rest, true, 'The rest of your scan list') };
+    // your own lists, and a new one; the lists you removed come back from here
+    const foot = '<div class="wlnew"><button class="btn sm" data-act="wl-new" title="Make a list of your own: file tickers into it with ☆">+ New list</button>'
+      + hid.map(k => '<button class="lnk" data-act="wl-unhide" data-l="' + k + '">Bring back ' + esc(wlName(k)) + '</button>').join('') + '</div>';
+    return ord.map(k => (isCustom(k) ? (cust[k] ? sec(k, wlName(k), cust[k], false, 'Your list: file tickers here with ☆') : '') : make[k]())).join('') + foot;
   }
   // a Big Market row: what it is, its price and its day
   function mktItem(sym) {
     const q = S.quotes[sym] || {}, last = +q.last, ch = +q.change, pc = +q.change_percentage, on = S.cur && S.cur.sym === sym ? ' on' : '';
-    return '<div class="ri mk' + on + '" role="button" tabindex="0" data-act="load" data-t="' + esc(sym) + '"><span class="l1"><span class="s' + (ch > 0 ? ' up' : ch < 0 ? ' dn' : '') + '">' + esc(sym) + '</span>'
-      + '<span class="p">' + (last > 0 ? F.px(last) : '—') + '</span></span><span class="l2"><span class="faint">' + esc(MKT_NAME[sym] || '') + '</span><span class="' + (ch > 0 ? 'up' : ch < 0 ? 'dn' : 'dim') + '">' + (isNum(ch) ? F.sn(ch, 2) + ' ' + F.sp(pc, 2) : '') + '</span></span>' + extLine(sym) + '</div>';
+    return '<div class="ri mkr' + on + '" role="button" tabindex="0" data-act="load" data-t="' + esc(sym) + '"><span class="l1"><span class="s' + (ch > 0 ? ' up' : ch < 0 ? ' dn' : '') + '">' + esc(sym) + '</span>'
+      + '<span class="p">' + (last > 0 ? F.px(last) : '—') + '</span><span class="cg ' + (ch > 0 ? 'up' : ch < 0 ? 'dn' : 'dim') + '">' + (isNum(ch) ? F.sn(ch, 2) + ' ' + F.sp(pc, 2) : '') + '</span></span>'
+      + (MKT_NAME[sym] ? '<span class="l2"><span class="nm faint">' + esc(MKT_NAME[sym]) + '</span></span>' : '') + extLine(sym) + '</div>';
   }
   // the grades on the right of a row; in a row you hold, the thesis of your trade instead (the letter grades a new entry)
   function railGrades(r, sec) {
@@ -6821,6 +7026,13 @@ a.nwh:hover{color:#fff;text-decoration:underline}
     const parts = ts.map(t => { const lv = t.live || {}, m = lv.bid > 0 && lv.ask >= lv.bid ? (lv.bid + lv.ask) / 2 : NaN, pnl = isNum(m) ? (m - t.entry) * leftQty(t) * 100 : NaN, th = thesisOf(t);
       return '<span class="' + (pnl > 0 ? 'up' : pnl < 0 ? 'dn' : 'dim') + '">' + leftQty(t) + ' ' + esc(strikeStr(t.K) + t.dir) + ' ' + F.susd(pnl) + (isNum(m) ? ' (' + F.sp((m / t.entry - 1) * 100, 0) + ')' : '') + '</span>'
         + (th.st === 'broken' || th.st === 'watch' ? '<span class="thr th-' + th.st + 't" title="' + esc(thesisTip(th)) + '">' + esc(th.why) + '</span>' : ''); });
+    // positions at Tradier COIL has no trade for here: from their cost and the option's quote
+    heldPositions().forEach(p => {
+      const os = OS(p.symbol), o = parseOcc(os), q = +p.quantity;
+      if (!o || o.root !== sym || ts.some(t => OS(t.sym) === os)) return;
+      const qq = S.quotes[os] || {}, m = +qq.bid >= 0 && +qq.ask > 0 && +qq.ask >= +qq.bid ? (+qq.bid + +qq.ask) / 2 : +qq.last > 0 ? +qq.last : NaN, per = +p.cost_basis / q / 100, pnl = isNum(m) ? (m - per) * q * 100 : NaN;
+      parts.push('<span class="' + (pnl > 0 ? 'up' : pnl < 0 ? 'dn' : 'dim') + '">' + q + ' ' + esc(strikeStr(o.K) + o.type) + ' ' + (isNum(pnl) ? F.susd(pnl) + ' (' + F.sp((m / per - 1) * 100, 0) + ')' : '@ ' + fpx(per)) + '</span>');
+    });
     wk.forEach(o => parts.push('<span class="am">buying ' + o.qty + ' ' + esc(strikeStr(o.K) + o.dir) + '</span>'));
     return parts.length ? '<span class="l3">' + parts.join(' · ') + '</span>' : '';
   }
@@ -6828,19 +7040,19 @@ a.nwh:hover{color:#fff;text-decoration:underline}
     const on = S.cur && S.cur.sym === r.sym ? ' on' : '', wl = wlOf(r.sym), menu = LST.wlMenu === r.sym;
     const tl = sec === 'in' ? railTradeLine(r.sym) : '';
     const rx = (sec === 'in' && !scanListArr().includes(r.sym) ? '' : '<button class="rx" data-act="rail-rm" data-t="' + esc(r.sym) + '" title="Remove ' + esc(r.sym) + ' from your scan list" aria-label="Remove ' + esc(r.sym) + '"></button>')
-      + '<button class="rw' + (wl ? ' ' + wl : '') + (menu ? ' open' : '') + '" data-act="wl-menu" data-t="' + esc(r.sym) + '" title="' + esc(r.sym) + ' is ' + (wl ? 'in ' + WL_NAME[wl] : 'on the full list only') + ' — click to file it" aria-label="Watchlist for ' + esc(r.sym) + '">' + (wl === 'ready' ? '⚡' : wl === 'top' ? '★' : '☆') + '</button>'
-      + (menu ? '<span class="wlm">' + ['ready', 'top', ''].map(k => '<button class="' + (wl === k ? 'on' : '') + '" data-act="wl-set" data-t="' + esc(r.sym) + '" data-l="' + k + '">' + (k === 'ready' ? '⚡ ' : k === 'top' ? '★ ' : '☆ ') + WL_NAME[k] + (k ? '' : ' only') + '</button>').join('') + '</span>' : '')
+      + '<button class="rw' + (wl ? ' ' + wl : '') + (menu ? ' open' : '') + '" data-act="wl-menu" data-t="' + esc(r.sym) + '" title="' + esc(r.sym) + ' is ' + (wl ? 'in ' + wlName(wl) : 'on the full list only') + ' — click to file it" aria-label="Watchlist for ' + esc(r.sym) + '">' + (wl === 'ready' ? '⚡' : wl === 'top' ? '★' : wl ? '▣' : '☆') + '</button>'
+      + (menu ? '<span class="wlm">' + ['ready', 'top'].concat(wlCustom().map(c => 'c:' + c.id), ['']).map(k => '<button class="' + (wl === k ? 'on' : '') + '" data-act="wl-set" data-t="' + esc(r.sym) + '" data-l="' + k + '">' + (k === 'ready' ? '⚡ ' : k === 'top' ? '★ ' : k ? '▣ ' : '☆ ') + esc(wlName(k)) + (k ? '' : ' only') + '</button>').join('') + '</span>' : '')
       + tl;
     const q0 = S.quotes[r.sym], c0 = q0 ? +q0.change_percentage : NaN;
     if (r.pending || r.err) { const m0 = dayMove(r.sym, null), p0 = q0 && +q0.last > 0 ? +q0.last : NaN;
-      return '<div class="ri' + on + '" role="button" tabindex="0" data-act="load" data-t="' + esc(r.sym) + '"><span class="l1"><span class="s' + (c0 > 0 ? ' up' : c0 < 0 ? ' dn' : '') + '">' + esc(r.sym) + '</span><span class="p' + (isNum(p0) ? '' : ' faint') + '">' + (r.err ? '!' : isNum(p0) ? F.px(p0) + ' <span class="' + (m0.pct > 0 ? 'up' : m0.pct < 0 ? 'dn' : 'dim') + '">' + F.sn(m0.usd, 2) + ' ' + F.sp(m0.pct, 1) + '</span>' : '') + '</span></span>'
+      return '<div class="ri' + on + '" role="button" tabindex="0" data-act="load" data-t="' + esc(r.sym) + '"><span class="l1"><span class="s' + (c0 > 0 ? ' up' : c0 < 0 ? ' dn' : '') + '">' + esc(r.sym) + '</span><span class="p' + (isNum(p0) ? '' : ' faint') + '">' + (r.err ? '!' : isNum(p0) ? F.px(p0) : '') + '</span>' + (isNum(p0) && isNum(m0.pct) ? '<span class="cg ' + (m0.pct > 0 ? 'up' : m0.pct < 0 ? 'dn' : 'dim') + '">' + F.sn(m0.usd, 2) + ' ' + F.sp(m0.pct, 1) + '</span>' : '') + '</span>'
       + '<span class="l2"><span class="m" title="' + esc(r.err || '') + '">' + (r.err ? '<span class="pk st">' + esc(String(r.err).slice(0, 34)) + '</span>' : '<span class="faint">' + (LST.busy.has(r.sym) ? 'reading…' : 'not scanned') + '</span>') + '</span></span>' + extLine(r.sym) + rx + '</div>'; }
     const q = S.quotes[r.sym], px = q && +q.last > 0 ? +q.last : r.spot, mv = dayMove(r.sym, r), chg = mv.pct, amt = mv.usd;
-    const comp = isNum(r.comp) ? clamp(r.comp, 0, 100) : 0, col = stateCol(r.state), fit = rowFit(r), off = fit && !fit.ok;
-    return '<div class="ri' + on + (off ? ' off' : '') + '" role="button" tabindex="0" data-act="load" data-t="' + esc(r.sym) + '" title="' + esc(r.sym + ': ' + (r.state || '') + ', compression ' + F.n(r.comp, 0) + ', cheapness ' + F.n(r.cheap, 0) + (off ? '\nNot your style: ' + fit.miss.map(x => x.txt).join('; ') : '')) + '">'
-      + '<span class="l1"><span class="s' + (chg > 0 ? ' up' : chg < 0 ? ' dn' : '') + '">' + esc(r.sym) + (wlOf(r.sym) && sec === 'in' ? '<span class="wb ' + wlOf(r.sym) + '" title="' + WL_NAME[wlOf(r.sym)] + '">' + (wlOf(r.sym) === 'ready' ? '⚡' : '★') + '</span>' : '') + '</span><span class="p">' + F.px(px) + ' <span class="' + (chg > 0 ? 'up' : chg < 0 ? 'dn' : 'dim') + '">' + F.sn(amt, 2) + ' ' + F.sp(chg, 1) + '</span></span></span>'
+    const comp = isNum(r.comp) ? clamp(r.comp, 0, 100) : 0, col = stateCol(r.state), fit = rowFit(r), off = fit && !fit.ok, su = E.setupScore(r.state, r.comp, r.cheap);
+    return '<div class="ri' + on + (off ? ' off' : '') + '" role="button" tabindex="0" data-act="load" data-t="' + esc(r.sym) + '" title="' + esc(r.sym + ': ' + (r.state || '') + ', compression ' + F.n(r.comp, 0) + ', cheapness ' + F.n(r.cheap, 0) + ' — setup ' + F.sn(su.pts, 0) + (su.both ? ' (coiled and cheap)' : '') + (off ? '\nNot your style: ' + fit.miss.map(x => x.txt).join('; ') : '')) + '">'
+      + '<span class="l1"><span class="s' + (chg > 0 ? ' up' : chg < 0 ? ' dn' : '') + '">' + esc(r.sym) + (wlOf(r.sym) && sec === 'in' ? '<span class="wb ' + (isCustom(wlOf(r.sym)) ? 'cust' : wlOf(r.sym)) + '" title="' + esc(wlName(wlOf(r.sym))) + '">' + (wlOf(r.sym) === 'ready' ? '⚡' : wlOf(r.sym) === 'top' ? '★' : '▣') + '</span>' : '') + '</span><span class="p">' + F.px(px) + '</span><span class="cg ' + (chg > 0 ? 'up' : chg < 0 ? 'dn' : 'dim') + '">' + F.sn(amt, 2) + ' ' + F.sp(chg, 1) + '</span></span>'
       // a flagged line is the dot (its state's color; the name is in the tooltip) and the reason, so the reason always shows
-      + '<span class="l2"><span class="m"><span class="dot" style="background:' + col + '"></span>' + (off ? '' : '<span class="st" style="color:' + col + '">' + esc(r.state || '—') + '</span><span class="meter" title="Compression ' + F.n(r.comp, 0) + '"><i style="width:' + comp + '%;background:' + col + '"></i></span>')
+      + '<span class="l2"><span class="m">' + (su.both ? '<span class="sbd" title="Coiled and cheap: the setup COIL looks for (it ranks up)">◆</span>' : '') + '<span class="dot" style="background:' + col + '"></span>' + (off ? '' : '<span class="st" style="color:' + col + '">' + esc(r.state || '—') + '</span><span class="meter" title="Compression ' + F.n(r.comp, 0) + '"><i style="width:' + comp + '%;background:' + col + '"></i></span>')
       + (off ? '<span class="am fl" title="' + esc('Not your style: ' + fit.miss.map(x => x.txt).join('; ')) + '">⚑ ' + esc((fit.first || 'off style') + (fit.miss.length > 1 ? ' +' + (fit.miss.length - 1) : '')) + '</span>'
         : (isNum(r.cheap) ? '<span class="fl ' + (r.cheap >= 60 ? 'lm' : r.cheap < 30 ? 'faint' : '') + '" title="Option cheapness, 0–100">cheap ' + r.cheap.toFixed(0) + '</span>' : '') + (r.ev ? '<span class="or fl" title="An event is priced in your window">event</span>' : '')) + '</span>'
       + railGrades(r, sec) + '</span>' + extLine(r.sym) + rx + '</div>';
@@ -6975,8 +7187,21 @@ a.nwh:hover{color:#fff;text-decoration:underline}
   function renderTradesLive() { renderDock(); if (S.ui.page === 'trades') renderPage(); renderTop(); if (S.ui.ov.plan) { chartDirty(); drawChartSoon(); } }
   // everything for a fresh quote: the header, the rail, the inspector, the chart
   function renderLive() { renderTop(); renderRail(); renderInsp(); renderDock(); chartDirty(); drawChartSoon(); if (S.ui.page === 'trades' || (S.ui.page === 'pocket' && S.ui.pk !== 'open')) renderPage(); renderPbar(); }
+  // each tab keeps its place: leaving one remembers how far down it was, coming back puts you there again (the phone
+  // scrolls the whole middle; the desktop's pages scroll on their own)
+  function scrollEls() { return [root.querySelector('.' + cx('main')), $('page')].filter(Boolean); }
   function render() {
     if (!root) return;
+    const pg = S.ui.page, prev = LST.rPage, moved = !!prev && prev !== pg;
+    if (moved) { LST.scr = LST.scr || {}; LST.scr[prev] = scrollEls().map(e => e.scrollTop); }
+    LST.rPage = pg;
+    renderPaged();
+    if (moved) {
+      const want = (LST.scr && LST.scr[pg]) || [], put = () => scrollEls().forEach((e, i) => { e.scrollTop = want[i] || 0; });
+      put(); requestAnimationFrame(put); setTimeout(put, 80);
+    }
+  }
+  function renderPaged() {
     $('desk').classList.toggle(cx('hide'), S.ui.page !== 'desk');
     $('desk').classList.toggle(cx('rc'), !!S.ui.railC); $('desk').classList.toggle(cx('ic'), !!S.ui.inspC);
     $('page').classList.toggle(cx('hide'), S.ui.page === 'desk');
@@ -7730,9 +7955,12 @@ a.nwh:hover{color:#fff;text-decoration:underline}
       + '<li><b>Positions</b> (the phone\'s first screen; Positions in the menu anywhere): everything you hold at Tradier with its live P/L, whatever opened it, and what rests on it. <b>Close</b> starts at the bid for all of it; tap Bid, Mid or Ask, − / + a tick, or fewer contracts. Sell asks for a second tap, then takes every order working to sell that contract off first (your OCO), each confirmed gone by Tradier, and puts in a day limit. While it works, each − / + or price tap changes it at Tradier at once, and the card says WORKING, ✓ FILLED or ✕ REJECTED with Tradier\'s reason. <b>Rest an OCO</b> puts a take-profit and a stop on a position that has none. <b>Open a trade</b> is COIL\'s contracts and ticket for any ticker.</li>'
       + '<li><b>The web version</b> (index.html) is COIL with no Tampermonkey, for a phone or a tablet: put it on a site of your own (Netlify, Cloudflare Pages, GitHub Pages) and open it there. Tradier answers it directly; of the news sources only Finnhub does, so add a Finnhub key there for headlines. Its storage (your token, settings, watchlists) is that site\'s own, on that device, and the page can talk only to Tradier and Finnhub. On a touch screen: drag the chart, pinch to zoom, double-tap to reset, press and hold for the crosshair. Each device is its own COIL: a trade opened on the phone is watched by the phone while it\'s open, and its OCO rests at Tradier.</li>'
       + '<li><b>Under the chart</b>: one slim line, so the chart keeps its height — each trade (click it for the full card over the chart), each buy still working, and what happened to your recent buys: <b>✓ FILLED</b>, <b>✕ REJECTED</b> (with Tradier\'s reason), <b>CANCELED</b>, until you clear them. On the ticket, click the bid, middle or ask to set your limit, or − / + a tick. Once it\'s working, each − / + or bid / mid / ask click (on the ticket or in the dock) changes the limit at Tradier right away.</li>'
-      + '<li><b>Pre-market and after-hours</b>: outside the regular session each watchlist row, Big Market and the header show where the stock trades now — <b>PM</b> before 9:30, <b>AH</b> after 4:00 — and its move from the regular close (after hours from today\'s, pre-market from the last session\'s). COIL reads them every two minutes for the ticker on your desk, what you\'re in, Ready to Pull Trigger, Top tier and Big Market (25 at most). The daily chart shows the same price as a dotted line and tag. On 4H, 1H, 15m and 5m, Chart settings → Intraday sessions → <b>Extended hours</b> adds the bars themselves, 4:00 AM to 8:00 PM ET, on a tinted ground; each day\'s line still marks the 9:30 open, and the indicators count those bars while it\'s on.</li>'
+      + '<li><b>Pre-market and after-hours</b>: during the pre-market (4:00 to 9:30 AM ET) and the after-hours (4:00 to 8:00 PM ET) each watchlist row, Big Market and the header show where the stock trades now — <b>PM</b> before 9:30, <b>AH</b> after 4:00 — and its move from the regular close (after hours from today\'s, pre-market from the last session\'s). COIL reads them every two minutes for the ticker on your desk, what you\'re in, Ready to Pull Trigger, Top tier and Big Market (25 at most). The daily chart shows the same price as a dotted line and tag. On 4H, 1H, 15m and 5m, Chart settings → Intraday sessions → <b>Extended hours</b> adds the bars themselves, 4:00 AM to 8:00 PM ET, on a tinted ground; each day\'s line still marks the 9:30 open, and the indicators count those bars while it\'s on.</li>'
       + '<li><b>Your trade on the chart</b>: an arrow and a dot at the bar and stock price where you got in (IN for COIL\'s trades, HELD for a position COIL found at Tradier, opened on your other device or in Tradier\'s app, placed from its acquire date and cost), the zone since, and a dashed line from your entry to the price now. At the right edge your <b>live P/L</b> rides the price, in dollars and percent, with the day you\'re on (of your planned hold) and the days to expiration. An amber line marks the <b>breakeven at expiration</b>: the strike plus what you paid for a call, less it for a put. Each can be switched off in Chart settings → Plan and trades.</li>'
       + '<li><b>Drawing tools</b> (the strip at the chart\'s left: « at its foot hides it and the chart takes the room; the small ✎ tab left behind, or ✎ at the front of the chart tools, brings it back; Chart settings → Drawing can hide the drawings themselves): lines, rays, rectangles, channels, Fib, and three for swing trades. <b>⇕ Measure</b>: two clicks, the move between them in dollars and percent, with the bars and the days. <b>R Risk/reward</b>: click your entry, then your stop; the target starts at 2R and you drag its corner to where you want it; it shows each in % and the R it pays. <b>🔔 Price alert</b>: one click on a price; when the stock gets there COIL flashes and chimes (Sounds on), once, while it\'s open. Drag it to set it again.</li>'
+      + '<li><b>Your own watchlists</b>: <b>+ New list</b> at the foot of your lists makes one (type its name, Enter). ☆ on a ticker files it there, like Ready to Pull Trigger and Top tier (a ticker sits in one list at most). ✎ on any list\'s header renames it; for Ready, Top tier, Big Market and your own it also has Delete (tap twice): your own list goes (its tickers stay on the full list), Ready and Top tier empty out, Big Market hides with its tickers kept. <b>Bring back</b> at the foot restores one. Your own lists sync through Tradier too (as COILX watchlists): new, renamed, deleted, and what\'s in them.</li>'
+      + '<li><b>In trades</b> lists everything you hold at Tradier, opened here, on your other device or in Tradier\'s app, each with its contracts and P/L.</li>'
+      + '<li><b>Best setup</b> ranks the setup COIL is built for first: coiled (or coiling: neutral with compression 60+) with cheap options. On top of the grade it counts the state (coiled +60, firing +40, coiling +30, expanding −60, elevated −100) and the cheapness (−50 to +50 around 50), and +80 more when it\'s coiled or coiling and cheap (60+). Those rows carry a ◆.</li>'
       + '<li><b>Sorting your lists</b>: the Sort menu above the scanner (the Watchlists tab on the phone) puts every list in that order. For today\'s move, tap <b>▼ %</b> (down the most by percent first), <b>▲ %</b>, <b>▼ $</b> (down the most in dollars) or <b>▲ $</b>; ✕ goes back to the best setup first. It sorts on the live quote, scanned or not, and Big Market follows it too (otherwise Big Market keeps your own order).</li>'
       + '<li><b>The desktop and the phone together</b>: positions, P/L and orders always match, as both read your Tradier account. Your watchlists sync through Tradier (Settings → Sync): they\'re kept there as COIL Ready, COIL Top, COIL Market and COIL Scan, and each device takes in the other\'s changes within a minute (at once when you open it). Add on one and it\'s on the other; take one off and it goes from both. Your settings go across with a code: Copy my settings on one, paste it on the other and Apply (it never carries your token, keys, account number or whether trading is on). A trade\'s stop and take-profit rest at Tradier, so the phone\'s Positions card shows them whichever device set them, with how far each is from now and what you\'d make or lose there. COIL\'s own option-stop watch runs on the device that opened the trade, so two devices never both sell at a stop.</li>'
       + '<li><b>Full-screen chart</b> (phone and tablet): tap ⛶ at the left of the chart tools to give the chart the whole screen; ✕ at the top right (or Esc) brings everything back. Turn the phone sideways for the widest view. Pan, pinch and press-and-hold work the same.</li>'
@@ -7783,6 +8011,7 @@ a.nwh:hover{color:#fff;text-decoration:underline}
     root.addEventListener('input', onInput);
     root.addEventListener('keydown', (e) => {
       const t = e.target;
+      if (t.matches && t.matches('[data-id="wlName"]') && (e.key === 'Enter' || e.key === 'Escape')) { e.preventDefault(); const k = t.getAttribute('data-l'); if (e.key === 'Enter') { wlRename(k, t.value); flash('Renamed: ' + wlName(k), 'ok'); } LST.wlEdit = null; t.blur(); listChanged(); return; }
       if (t.matches && t.matches('[data-id="pkSym"]') && e.key === 'Enter') { e.preventDefault(); const v = t.value.trim().toUpperCase(); if (v) { t.blur(); loadTicker(v); } }
       if (t.matches && t.matches('[data-id="sym"]') && e.key === 'Enter') { e.preventDefault(); const v = t.value.trim(); if (v) { goDesk(); loadTicker(v); t.blur(); } }
       if (t.matches && t.matches('[data-set], [data-cs]') && e.key === 'Enter' && t.tagName === 'INPUT') { e.preventDefault(); t.blur(); }
@@ -7959,12 +8188,24 @@ a.nwh:hover{color:#fff;text-decoration:underline}
       }
       case 'wl-fold': { const k = a.getAttribute('data-l'); S.ui.wlFold = Object.assign({}, S.ui.wlFold, { [k]: !(S.ui.wlFold || {})[k] }); saveUI(); renderRail(); break; }
       case 'wl-move': {
-        const k = a.getAttribute('data-l'), d = +a.getAttribute('data-d'), inN = openTrades().length + S.orders.length;
-        const o = S.ui.wlOrder.slice(), seen = o.filter(x => x !== 'in' || inN), i = seen.indexOf(k), j = i + d;
+        const k = a.getAttribute('data-l'), d = +a.getAttribute('data-d');
+        const o = wlOrderFix().slice(), seen = wlShownKeys(inTradeSyms().length), i = seen.indexOf(k), j = i + d;
         if (i < 0 || j < 0 || j >= seen.length) return;
         const a2 = o.indexOf(seen[i]), b2 = o.indexOf(seen[j]); [o[a2], o[b2]] = [o[b2], o[a2]];
         S.ui.wlOrder = o; saveUI(); renderRail(); break;
       }
+      case 'wl-edit': { const k = a.getAttribute('data-l'); LST.wlEdit = LST.wlEdit === k ? null : k; LST.wlDelSure = null; renderRail(); if (S.ui.page === 'wl') renderPage();
+        setTimeout(() => { const el = root.querySelector('[data-id="wlName"]'); if (el) { el.focus(); el.select(); } }, 30); break; }
+      case 'wl-edit-x': LST.wlEdit = null; LST.wlDelSure = null; renderRail(); if (S.ui.page === 'wl') renderPage(); break;
+      case 'wl-ren': { const k = a.getAttribute('data-l'), el = root.querySelector('[data-id="wlName"]'); if (el) wlRename(k, el.value); LST.wlEdit = null; flash('Renamed: ' + wlName(k), 'ok'); listChanged(); break; }
+      case 'wl-del': {
+        const k = a.getAttribute('data-l');
+        if (LST.wlDelSure !== k) { LST.wlDelSure = k; renderRail(); if (S.ui.page === 'wl') renderPage(); break; }
+        const nm = wlName(k); wlDelete(k); LST.wlEdit = null; LST.wlDelSure = null;
+        flash((isCustom(k) ? 'Deleted ' : 'Removed ') + nm + (k === 'mkt' ? ' (Bring it back from the foot of your lists)' : ''), 'ok'); listChanged(); break;
+      }
+      case 'wl-new': { const k = wlNew(); LST.wlEdit = k; listChanged(); setTimeout(() => { const el = root.querySelector('[data-id="wlName"]'); if (el) { el.focus(); el.select(); } }, 40); break; }
+      case 'wl-unhide': { wlUnhide(a.getAttribute('data-l')); listChanged(); break; }
       case 'wl-menu': { const s = a.getAttribute('data-t'); LST.wlMenu = LST.wlMenu === s ? null : s; renderRail(); break; }
       case 'wl-set': { const s = a.getAttribute('data-t'); LST.wlMenu = null; if (s) setWatch(s, a.getAttribute('data-l') || ''); break; }
       case 'rm-off': { const off = offStyle(); if (!off.length) break; if (confirmOnce(LST, 'confirmOff')) removeFromScan(off, 'Removed ' + off.length + ' outside your style'); else { renderRail(); if (S.ui.page === 'set') renderPage(); } break; }
@@ -8264,7 +8505,7 @@ a.nwh:hover{color:#fff;text-decoration:underline}
       if (on && !fs) { const el = document.documentElement, rq = el.requestFullscreen || el.webkitRequestFullscreen; if (rq) { const p = rq.call(el); if (p && p.catch) p.catch(() => {}); } }
       else if (!on && fs) { const ex = document.exitFullscreen || document.webkitExitFullscreen; if (ex) { const p = ex.call(document); if (p && p.catch) p.catch(() => {}); } }
     } catch (e) { /* not allowed here: the window fill is enough */ }
-    chartDirty(); drawChartSoon(); setTimeout(() => { chartDirty(); drawChartSoon(); }, 250);
+    renderTop(); chartDirty(); drawChartSoon(); setTimeout(() => { chartDirty(); drawChartSoon(); }, 250);
   }
   // leaving the browser's full screen (a back swipe, Esc) leaves COIL's too
   ['fullscreenchange', 'webkitfullscreenchange'].forEach(ev => document.addEventListener(ev, () => { if (LST.cfull && !(document.fullscreenElement || document.webkitFullscreenElement) && LST.cfullFs) chartFull(false); LST.cfullFs = !!(document.fullscreenElement || document.webkitFullscreenElement); }));
