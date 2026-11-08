@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline' blob:; worker-src blob:; style-src 'unsafe-inline'; img-src data: blob:; connect-src 'self' https://api.tradier.com https://sandbox.tradier.com https://finnhub.io https://api.anthropic.com; base-uri 'none'; form-action 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline' blob:; worker-src blob:; style-src 'unsafe-inline'; img-src data: blob:; connect-src 'self' https://api.tradier.com https://sandbox.tradier.com https://finnhub.io https://api.anthropic.com https://api.pushover.net; base-uri 'none'; form-action 'none'">
 <meta name="referrer" content="no-referrer">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="mobile-web-app-capable" content="yes">
@@ -13,7 +13,7 @@
 <link rel="apple-touch-icon" href="data:image/png;base64,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">
 <link rel="icon" href="data:image/png;base64,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">
 <title>COIL</title>
-<!-- H-C COIL 1.9.7, web version -->
+<!-- H-C COIL 1.9.8, web version -->
 <style>html,body{overflow-x:hidden;overscroll-behavior-x:none;-webkit-text-size-adjust:100%;text-size-adjust:100%;max-width:100%}</style>
 </head>
 <body style="margin:0;background:#393a3d">
@@ -21,7 +21,7 @@
 // ==UserScript==
 // @name         H-C COIL — Trend & Structure Options Desk
 // @namespace    hyphen-c
-// @version      1.9.7
+// @version      1.9.8
 // @description  A chart-first desk for long calls and puts, built on Trend & Structure (HMA cloud, Zig Zag Dynamic channels, Breadth Divergence, VolCX) and its Trade Score with the 20/90-day volume profile. A scanner for coiled stocks with cheap 2–4 week options, a stop set on the stock from ATR, ADR and IV, position size from your risk, and trading through Tradier with take profit, a backup stop at Tradier and a stock-level stop it watches for you. Dealer gamma (GEX) levels and read, news and alerts like the cockpit's, and every part of the chart on or off.
 // @author       Hyphen-C
 // @match        file:///*hc-coil*.html
@@ -32,6 +32,7 @@
 // @connect      sandbox.tradier.com
 // @connect      finnhub.io
 // @connect      api.anthropic.com
+// @connect      api.pushover.net
 // @connect      finance.yahoo.com
 // @connect      news.google.com
 // @connect      faireconomy.media
@@ -1610,7 +1611,7 @@ const COIL_ENGINE = (function () {
   window.__HC_COIL__ = true;
 
   const E = COIL_ENGINE, isNum = E.isNum, clamp = E.clamp;
-  const VERSION = '1.9.7';
+  const VERSION = '1.9.8';
 
   // ───────────────────────── storage ─────────────────────────
   const hasGM = typeof GM_getValue === 'function' && typeof GM_setValue === 'function';
@@ -1629,7 +1630,7 @@ const COIL_ENGINE = (function () {
   const KEY = {
     tradier: 'hc_coil_tradier_key', settings: 'hc_coil_settings', ui: 'hc_coil_ui', scan: 'hc_coil_scan', ivh: 'hc_coil_ivh',
     breadth: 'hc_coil_breadth', sectors: 'hc_coil_sectors', trades: 'hc_coil_trades', orders: 'hc_coil_orders', journal: 'hc_coil_journal',
-    lease: 'hc_coil_trade_lease', sa: 'hc_coil_setup_alerts', autoscan: 'hc_coil_autoscan', intents: 'hc_coil_intents', debug: 'hc_coil_debug',
+    lease: 'hc_coil_trade_lease', sa: 'hc_coil_setup_alerts', pushover: 'hc_coil_pushover', autoscan: 'hc_coil_autoscan', intents: 'hc_coil_intents', debug: 'hc_coil_debug',
     finnhub: 'hc_coil_finnhub_key', news: 'hc_coil_news', draw: 'hc_coil_draw', wlsync: 'hc_coil_wlsync', anthropic: 'hc_coil_anthropic_key', ai: 'hc_coil_ai'
   };
   // The breadth basket: large caps across every sector, standing in for the NYSE/Nasdaq internals Tradier doesn't carry
@@ -4111,6 +4112,87 @@ const COIL_ENGINE = (function () {
     return out;
   }
   const corrWord = (r) => (r >= 0.4 ? 'a <b>strong</b> link — higher, better' : r >= 0.2 ? 'some link — higher tended to do better' : r > -0.2 ? 'little link so far' : r > -0.4 ? 'an upside-down link — higher did worse' : 'a strong upside-down link — higher did worse');
+  // ───────────────────────── ALERTS TO YOUR PHONE (Pushover) ─────────────────────────
+  // With your Pushover user key and app token saved on this device and the switch on, each setup alert this COIL raises
+  // also goes to your phone through Pushover, and a withdrawn one follows quietly. Tapping it opens COIL on your phone
+  // on that ticker: it reads it afresh and opens the ticket only if the setup still fits. The keys stay on this device
+  // (Tampermonkey storage, or this site's storage on the web), go only to api.pushover.net, never into error text, and
+  // never into the settings code; the switch is per device, so only the computer you leave open sends.
+  const PO_RE = /^[A-Za-z0-9]{30}$/;
+  const PO_URL = 'https://api.pushover.net/1/messages.json';
+  const PO_SITE = 'https://hyphen-c.github.io/coil/';
+  const PO = { conf: false, busy: false, last: null };
+  function poCfg() { const c = store.get(KEY.pushover, null); return c && typeof c === 'object' ? { user: String(c.user || ''), app: String(c.app || ''), on: !!c.on } : { user: '', app: '', on: false }; }
+  const poReady = () => { const c = poCfg(); return c.on && PO_RE.test(c.user) && PO_RE.test(c.app); };
+  function poSave(k, raw, trusted) {
+    if (!trusted) return;
+    const v = String(raw || '').trim(); if (!v) return;
+    if (!PO_RE.test(v)) { flash('That doesn\'t look like a Pushover ' + (k === 'poUser' ? 'user key' : 'app token') + ' (30 letters and numbers), so it wasn\'t saved', true); renderPage(); return; }
+    const c = poCfg(); c[k === 'poUser' ? 'user' : 'app'] = v;
+    if (PO_RE.test(c.user) && PO_RE.test(c.app)) c.on = true;
+    store.set(KEY.pushover, c);
+    flash(k === 'poUser' ? 'Pushover user key saved' : 'Pushover app token saved' + (c.on ? ': alerts go to your phone from this device. Try Send a test' : ''), 'ok'); renderPage();
+  }
+  function poToggle(trusted) { if (!trusted) return; const c = poCfg(); c.on = !c.on; store.set(KEY.pushover, c); flash(c.on ? 'This device sends alerts to your phone' : 'This device no longer sends alerts to your phone', 'ok'); renderPage(); }
+  function poClear(trusted) { if (!trusted) return; store.set(KEY.pushover, null); PO.conf = false; flash('Pushover keys removed from this device', 'ok'); renderPage(); }
+  // one message. On the web a browser may not show Pushover's answer; the message goes all the same (a plain form post)
+  async function poSend(m) {
+    const c = poCfg(); if (!PO_RE.test(c.user) || !PO_RE.test(c.app)) throw new Error('No Pushover keys on this device');
+    const body = new URLSearchParams({ token: c.app, user: c.user, title: m.title, message: m.message, priority: String(m.priority || 0) });
+    if (m.url) { body.set('url', m.url); body.set('url_title', m.urlTitle || 'Open COIL'); }
+    if (m.ttl) body.set('ttl', String(m.ttl));
+    let r;
+    try { r = await gmRequest({ method: 'POST', url: PO_URL, timeout: 15000, headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, data: body.toString() }); }
+    catch (e) { if (WEB) return { sent: null }; throw new Error('Couldn\'t reach Pushover'); }
+    let j = null; try { j = JSON.parse(r.responseText || 'null'); } catch (e) { /* not JSON */ }
+    if (r.status === 200 && j && j.status === 1) return { sent: true };
+    const why = j && Array.isArray(j.errors) && j.errors.length ? j.errors.map(x => String(x).replace(/[A-Za-z0-9]{30}/g, '…')).join('; ') : 'HTTP ' + r.status;
+    throw new Error('Pushover: ' + why);
+  }
+  const poLink = (a) => PO_SITE + '?review=' + encodeURIComponent(a.sym + '-' + a.d);
+  function poAlert(a) {
+    if (!poReady()) return;
+    const b = a.best, side = a.d === 'C' ? 'calls' : 'puts', spot = S.quotes[a.sym] ? E.spotFrom(S.quotes[a.sym], null) : NaN;
+    poSend({ title: 'COIL: ' + a.sym + ' ' + side + ' ' + a.g + ' ' + F.n(a.t, 1), priority: 0, ttl: 3600, url: poLink(a), urlTitle: 'Review in COIL',
+      message: a.state + ' · cheap ' + F.n(a.cheap, 0) + (b ? ' · ' + expShort(b.exp) + ' ' + strikeStr(b.K) + a.d + ' @ ' + b.entry.toFixed(2) + (b.qty > 1 ? ' × ' + b.qty : '') : '') + (isNum(spot) ? ' · stock $' + F.px(spot) : '')
+        + '\nCOIL re-checks it when you open it.' })
+      .then(() => { PO.last = { at: Date.now(), ok: true }; }).catch(e => { PO.last = { at: Date.now(), ok: false, err: errText(e) }; flash('Couldn\'t send the alert to your phone: ' + errText(e), true); });
+  }
+  function poWithdrawn(lines) {
+    if (!poReady() || !lines.length) return;
+    poSend({ title: 'COIL: alert withdrawn', priority: -1, ttl: 3600, message: lines.join('\n') }).catch(() => {});
+  }
+  async function poTest(trusted) {
+    if (!trusted || PO.busy) return;
+    PO.busy = true; renderPage();
+    try {
+      const r = await poSend({ title: 'COIL test', message: 'Setup alerts from this device will arrive like this. Tap to open COIL.', url: PO_SITE, urlTitle: 'Open COIL', ttl: 600 });
+      flash(r.sent ? 'Sent: check your phone' : 'Sent from the web version (the browser can\'t show Pushover\'s answer): check your phone', 'ok');
+    } catch (e) { flash(errText(e), true); }
+    finally { PO.busy = false; renderPage(); }
+  }
+  // the settings row
+  function poRow() {
+    const c = poCfg(), ok = PO_RE.test(c.user) && PO_RE.test(c.app);
+    const inp = (k, have, ph) => '<input type="password" data-set="' + k + '" ' + NOFILL + ' placeholder="' + (have ? 'saved, ends ' + esc(have.slice(-4)) : ph) + '">';
+    return '<div class="fr"><div class="l">Pushover user key<small>From your Pushover dashboard (pushover.net, top right). Stored on this device, sent only to api.pushover.net</small></div><span class="fbtns">' + inp('poUser', PO_RE.test(c.user) ? c.user : '', '30 letters and numbers') + '</span></div>'
+      + '<div class="fr"><div class="l">Pushover app token<small>pushover.net → Create an Application/API Token (name it COIL)</small></div><span class="fbtns">' + inp('poApp', PO_RE.test(c.app) ? c.app : '', '30 letters and numbers') + '</span></div>'
+      + '<div class="fr"><div class="l">Send alerts to my phone from this device<small>' + (ok ? 'Turn it on only on the device you leave open, or you\'ll get each alert twice' : 'Save both keys first') + (PO.last && !PO.last.ok ? '. Last try: ' + esc(PO.last.err) : '') + '</small></div><span class="fbtns">'
+      + '<button class="sw' + (c.on && ok ? ' on' : '') + '" data-act="po-on" role="switch" aria-checked="' + !!(c.on && ok) + '"' + (ok ? '' : ' disabled') + '></button>'
+      + (ok ? '<button class="btn sm" data-act="po-test"' + (PO.busy ? ' disabled' : '') + '>' + (PO.busy ? 'Sending…' : 'Send a test') + '</button><button class="btn sm ghost" data-act="po-clear">' + (PO.conf ? 'Confirm' : 'Remove') + '</button>' : '') + '</span></div>';
+  }
+  // opened from a phone alert (?review=AAPL-C): read the ticker afresh and open the ticket if it still fits
+  function poDeepLink() {
+    if (!WEB || typeof location === 'undefined') return;
+    const m = /^([A-Z][A-Z0-9.]{0,9})-(C|P)$/.exec(new URLSearchParams(location.search).get('review') || '');
+    try { history.replaceState(null, '', location.pathname + location.hash); } catch (e) { /* fine */ }
+    if (!m || !store.get(KEY.tradier, '')) return;
+    const a = { id: m[1] + ':' + m[2], sym: m[1], d: m[2], best: null };
+    (async () => {
+      for (let i = 0; i < 40 && S.settings.tradeOn && !S.acct.list && !S.acct.err; i++) await new Promise(r => setTimeout(r, 250));     // the account, for the ticket
+      saOpen(a);
+    })();
+  }
   // ───────────────────────── SETUP ALERTS ─────────────────────────
   // When a ticker COIL has read turns into the setup you look for (by default an A, Coiled, options cheap 60 or more,
   // with a contract that fits), a card pops up: Review ticket opens the order ticket filled in with COIL's contract and
@@ -4153,7 +4235,7 @@ const COIL_ENGINE = (function () {
       if (r && !r.err && r.at > a.rAt) { const x = r[a.d]; Object.assign(a, { g: x.g, t: x.t, state: r.state, cheap: r.cheap, best: x.best, rAt: r.at }); moved = true; }
       return true;
     });
-    if (gone.length) { store.set(KEY.sa, m); flash('Alert withdrawn — ' + gone.join('; '), 'info'); }
+    if (gone.length) { store.set(KEY.sa, m); flash('Alert withdrawn — ' + gone.join('; '), 'info'); try { poWithdrawn(gone); } catch (e) { /* fine */ } }
     if (gone.length || moved) renderSa();
   }
   // what a read is short of
@@ -4180,7 +4262,8 @@ const COIL_ENGINE = (function () {
         if (m.seen[k] || !saFits(r, d)) return;
         m.seen[k] = 'shown'; hit++;
         const x = r[d];
-        SA.list.unshift({ id: k, sym: r.sym, d, g: x.g, t: x.t, state: r.state, cheap: r.cheap, best: x.best, at: now, rAt: r.at });
+        const a = { id: k, sym: r.sym, d, g: x.g, t: x.t, state: r.state, cheap: r.cheap, best: x.best, at: now, rAt: r.at };
+        SA.list.unshift(a); try { poAlert(a); } catch (e) { /* the card still shows */ }
       });
     });
     if (!hit) return;
@@ -4213,8 +4296,9 @@ const COIL_ENGINE = (function () {
   }
   // Review ticket: the ticker loads fresh, and the ticket opens on the alert's contract (or COIL's pick now, if that
   // one's gone). If the read changed since the alert, it says so before you buy.
-  async function saGo(id) {
-    const a = saDrop(id, 'taken'); if (!a || SA.busy) return;
+  async function saGo(id) { const a = saDrop(id, 'taken'); if (a) saOpen(a); }
+  async function saOpen(a) {
+    if (!a || SA.busy) return;
     SA.busy = true;
     try {
       S.ui.page = 'desk'; saveUI();
@@ -4224,10 +4308,10 @@ const COIL_ENGINE = (function () {
       if (!A) { flash('Couldn\'t read ' + a.sym + ' just now' + (S.cur && S.cur.err ? ': ' + S.cur.err : ''), true); return; }
       const fr = S.scan.res[a.sym];
       if (!saFits(fr, a.d)) { { const m = saSeen(); delete m.seen[a.id]; store.set(KEY.sa, m); } flash('Not opened: ' + a.sym + ' ' + sideWord(a.d) + ' no longer fits your alert (' + saWhy(fr, a.d) + ')', 'cau'); return; }
-      const o = A.opts[a.d], c = o && (o.list.find(x => x.sym === a.best.sym) || o.best);
+      const o = A.opts[a.d], c = o && ((a.best && o.list.find(x => x.sym === a.best.sym)) || o.best);
       if (!c) { flash('No ' + a.sym + ' ' + (a.d === 'C' ? 'call' : 'put') + ' fits your rules right now', true); return; }
       openTicket(c.sym);
-      if (c.sym !== a.best.sym && S.tkt) flash('Still fits; COIL\'s contract changed since the alert: ' + cLabel(a.sym, c), 'info');
+      if (a.best && c.sym !== a.best.sym && S.tkt) flash('Still fits; COIL\'s contract changed since the alert: ' + cLabel(a.sym, c), 'info');
     } finally { SA.busy = false; }
   }
   function renderSa() {
@@ -8302,7 +8386,8 @@ a.nwh:hover{color:#fff;text-decoration:underline}
       { k: 'saOn', l: 'Setup alerts', s: 'Checks every ticker on your lists each time COIL reads it (the scans, and the one you have open)', type: 'switch' },
       { k: 'saGrade', l: 'Grade', type: 'select', opts: [['A', 'A only (8+)'], ['B', 'A or B (6+)']] },
       { k: 'saStates', l: 'VolCX state', type: 'select', opts: [['C', 'Coiled'], ['CF', 'Coiled or Firing (just released)']] },
-      { k: 'saCheap', l: 'Options cheapness at least', s: '0–100; 60 is cheap', type: 'num' }] },
+      { k: 'saCheap', l: 'Options cheapness at least', s: '0–100; 60 is cheap', type: 'num' },
+      { k: 'push', type: 'push' }] },
     { h: 'Scanner', rows: [
       { k: 'scanList', l: 'Scan list', type: 'list' },
       { k: 'wlMkt', l: 'Big Market list', s: 'Prices only, in this order. Tradier has no crypto or dollar index: IBIT stands in for bitcoin, UUP for the dollar', type: 'list' },
@@ -8350,6 +8435,7 @@ a.nwh:hover{color:#fff;text-decoration:underline}
       : '<span class="faint" style="font-size:12px">' + (S.settings.tradeOn ? (S.acct.err ? esc(S.acct.err) : 'Reading…') : 'Turn trading on') + '</span>';
     else if (f.type === 'token') { const tk = String(store.get(KEY.tradier, '') || ''); ctl = '<input type="password" data-set="token" ' + NOFILL + ' placeholder="' + (tk ? 'saved, ends ' + esc(tk.slice(-4)) : 'paste it here') + '">'; }
     else if (f.type === 'button') ctl = '<button class="btn sm" data-act="' + f.act + '">' + f.btn + '</button>';
+    else if (f.type === 'push') return poRow();
     else if (f.type === 'aikey') {
       const ak = aiKey();
       return '<div class="fr"><div class="l">' + f.l + '<small>' + esc(f.s) + (ak ? '. A key is saved (ends ' + esc(ak.slice(-4)) + ')' : '') + '</small></div><span class="fbtns"><input type="password" data-set="anthropic" ' + NOFILL + ' placeholder="' + (ak ? 'saved' : 'sk-ant-…') + '">'
@@ -8454,6 +8540,9 @@ a.nwh:hover{color:#fff;text-decoration:underline}
       + '<li><b>Alerts</b> show under the header, newest first: a headline on one of those tickers from the last 90 minutes, market news that matches a major-event term (the Fed, inflation, jobs, tariffs, war, a selloff…), and a high-impact US release 15 minutes before and when it\'s out. Nothing shows when nothing happens. A dismissed alert stays gone; they clear after 4 hours.</li>'
       + '<li><b>Sources</b>: Finnhub with a free key from finnhub.io (Settings → News), which adds every ticker\'s earnings date; without one, Yahoo Finance headlines with Google News behind them. The key stays in Tampermonkey on this computer and goes only to Finnhub. COIL fetches every 2 minutes while the market\'s open, every 15 otherwise, and not while the tab is hidden.</li>'
       + '<li><b>Earnings</b> (with the key) and high-impact releases flag the chart; the bar readout names them. Earnings inside your ' + s.hold + '-day hold are flagged on the Options tab and the ticket, and the event the options price gets its name.</li></ul>'
+      + '<h2>Setup alerts</h2><ul><li>When a ticker COIL reads turns into your setup (Settings → Setup alerts: an A, Coiled, cheapness 60+ by default, with a contract that fits), a card pops up: <b>Review ticket</b> reads it again and opens the order ticket only if it still fits (BUY there sends it, after Tradier\'s preview); <b>Dismiss</b> waves it off for the day.</li>'
+      + '<li>A card stays only while the latest read fits: a slip below your grade, state or cheapness withdraws it, and an hour with no fresh read expires it. Tickers with a card are re-read every 3 minutes in the background.</li>'
+      + '<li><b>On your iPhone\'s lock screen</b>: install Pushover on the phone and sign in; on pushover.net copy your <b>user key</b>, then Create an Application/API Token named COIL and copy its <b>token</b>. Paste both in Settings → Setup alerts on the computer you leave open during the session, and Send a test. Each alert then goes to the phone; tapping it opens COIL there on that ticker, which reads it afresh and opens the ticket only if it still fits. A withdrawn alert follows as a quiet note. The computer has to stay awake with COIL open; turn the switch on only on that one device.</li></ul>'
       + '<h2>Dealer gamma (GEX)</h2><ul><li>From the open interest on every chain COIL reads: your window\'s, the front expirations (which carry the most gamma), the next monthly, and on the Ticker up to three more from 5 days out to two weeks past your window, so SPY and QQQ\'s daily expirations aren\'t skipped. Today\'s expirations count only with Settings → Options → Same-day expirations on. Open interest is as of the last close, with the usual model: customers sell calls and buy puts, so dealers are long the calls and short the puts. A lean, not a certainty: real dealer books aren\'t public.</li>'
       + '<li><b>Regime</b>: net dealer gamma for a 1% move against the stock\'s daily dollar volume. <b>Unstable</b> (under −2%): dealers chase moves, so they run further, the friend of long premium. <b>Stable</b> (over +2%): they sell rallies and buy dips, pinning price. <b>Transition</b>: price is on the flip.</li>'
       + '<li><b>Levels</b>: the <b>call wall</b> (most call gamma, resistance), the <b>put wall</b> (most put gamma, support), the <b>gamma flip</b> (where net gamma changes sign) and the max-gamma strike. They\'re on the chart (the GEX button; parts in Chart settings), with each strike\'s gamma as a bar from the left edge, and they count as levels for your stop and target.</li>'
@@ -8505,6 +8594,9 @@ a.nwh:hover{color:#fff;text-decoration:underline}
     switch (act) {
       case 'load': { const s = a.getAttribute('data-t'); if (S.ui.page === 'scan' || S.ui.page === 'wl' || a.hasAttribute('data-go')) goDesk(); if (s) { if (!S.cur || S.cur.sym !== s || S.cur.err) loadTicker(s); else render(); } break; }
       case 'page': S.ui.page = a.getAttribute('data-p'); saveUI(); render(); if (S.ui.page === 'trades' && brokerReady()) positionsNow(0).then(() => renderPage()).catch(() => {}); if (S.ui.page === 'pocket') pkRefresh(true); break;
+      case 'po-on': poToggle(trusted); break;
+      case 'po-test': poTest(trusted); break;
+      case 'po-clear': if (!PO.conf) { PO.conf = true; renderPage(); } else { PO.conf = false; poClear(trusted); } break;
       case 'sa-go': if (trusted) saGo(a.getAttribute('data-k')); break;
       case 'sa-no': saDrop(a.getAttribute('data-k'), 'dismissed'); break;
       case 'pnl-coil': S.ui.pnlCoil = !S.ui.pnlCoil; saveUI(); renderPage(); break;
@@ -8734,7 +8826,7 @@ a.nwh:hover{color:#fff;text-decoration:underline}
     if (el.matches('[data-id="dcol"]')) { DR.col = el.value; const w = DR.sel && S.cur ? drawsOf(S.cur.sym).find(x => x.id === DR.sel) : null; if (w) { w.col = el.value; saveDraws(); } chartDirty(); drawChartSoon(); return; }
     const k = el.getAttribute('data-set'); if (!k) return;
     applySetting(k, el.value, e.isTrusted);
-    if (k === 'token' || k === 'finnhub' || k === 'anthropic') el.value = '';
+    if (k === 'token' || k === 'finnhub' || k === 'anthropic' || k === 'poUser' || k === 'poApp') el.value = '';
   }
   // the ticket's fields move with your own typing only: what's sent is the ticket's, so a script can't edit it unseen
   // a chart setting: a slider moves the chart as you drag it (and is kept when you let go); a setting COIL's reads use too
@@ -8791,6 +8883,7 @@ a.nwh:hover{color:#fff;text-decoration:underline}
     }
     if (k === 'finnhub') { saveFinnKey(raw, trusted); return; }
     if (k === 'anthropic') { saveAiKey(raw, trusted); return; }
+    if (k === 'poUser' || k === 'poApp') { poSave(k, raw, trusted); return; }
     const prev = s[k], openN = openTrades().length;
     if (f.type === 'switch') s[k] = !!raw;
     else if (f.type === 'num' || f.type === 'pct') { const v = num(raw); if (!isNum(v)) { renderPage(); return; } s[k] = f.type === 'pct' ? v / 100 : v; }
@@ -9392,6 +9485,7 @@ a.nwh:hover{color:#fff;text-decoration:underline}
       if (S.settings.tradeOn) loadAccount(true).then(() => { if (S.ui.page === 'pocket') pkRefresh(true); }).catch(() => {});
       else if (S.trades.length) scheduleBK(1000);
     }
+    poDeepLink();                                                                                         // opened from a phone alert
     // the app's insides on the page's window — for the test harness, or with hc_coil_debug set in Tampermonkey storage.
     // In normal use nothing on the page can reach them (money-moving clicks still need your own events either way).
     if ((typeof GM_info === 'undefined' && !WEB) || store.get(KEY.debug, false) === true)
